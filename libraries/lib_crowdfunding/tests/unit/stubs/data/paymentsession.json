@@ -1,0 +1,32 @@
+{
+  "id": "2",
+  "user_id": "300",
+  "project_id": "4",
+  "reward_id": "9",
+  "record_date": "2017-06-15 06:12:37",
+  "unique_key": "",
+  "order_id": "",
+  "gateway": "",
+  "gateway_data": null,
+  "auser_id": "",
+  "session_id": "ec81d124910a7a49130adf02585c0a2e",
+  "intention_id": "34",
+  "services": [
+    {
+      "id": 2,
+      "alias": "paypal",
+      "data": {
+        "preapproval_key": "PA_KEY_654321"
+      },
+      "token": "T123456789",
+      "order_id": "OID_1234"
+    },
+    {
+      "id": 2,
+      "alias": "stripe",
+      "data": {},
+      "token": "",
+      "order_id": ""
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset name="reporting">
+
+        <field name="subject" type="text" class="input-xxlarge"
+               label="COM_CROWDFUNDING_SUBJECT"
+               description="COM_CROWDFUNDING_FIELD_REPORT_SUBJECT_DESC"
+               filter="trim"
+               required="true"
+               />
+
+        <field name="email" type="email" class="input-xxlarge"
+               label="COM_CROWDFUNDING_EMAIL"
+               description="COM_CROWDFUNDING_FIELD_REPORT_EMAIL_DESC"
+               filter="trim"
+               validate="email"
+               />
+
+        <field name="description" type="textarea" class="input-xxlarge"
+               label="COM_CROWDFUNDING_DESCRIPTION"
+               description="COM_CROWDFUNDING_FIELD_REPORT_DESCRIPTION_DESC"
+               filter="trim"
+               rows="5"
+               />
+
+        <field name="title" type="text" class="input-xxlarge"
+               label="COM_CROWDFUNDING_PROJECT"
+               disabled="true"
+               readonly="true"
+               />
+
+        <field name="user_id" type="user"
+               label="COM_CROWDFUNDING_USER"
+               />
+
+        <field name="id" type="text" class="readonly"
+               label="JGLOBAL_FIELD_ID_LABEL"
+               description="JGLOBAL_FIELD_ID_DESC"
+               default="0"
+               readonly="true"
+               />
+
+    </fieldset>
+</form>

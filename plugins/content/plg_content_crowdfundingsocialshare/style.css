@@ -1,0 +1,108 @@
+@CHARSET "UTF-8";
+
+
+.btm-10px{
+    border-top: thin solid #d1d1d1;
+    margin-top: 10px;     
+}
+
+.crowdf-share-tw{
+    float:left;
+    margin:10px 5px 0;
+}
+
+.crowdf-share-tbr{
+    float:left;
+    margin:10px;
+}
+
+.crowdf-share-fbl{
+    float:left;
+    margin:10px 10px 10px 0px;
+}
+
+.crowdf-share-su{
+    float:left;
+    margin-right:14px;
+    margin-top:11px;
+}
+.crowdf-share-lin{
+    float:left;
+    margin:10px 14px 0px 10px;
+}
+
+.crowdf-share-gone{
+    float:left;
+    margin-left:5px;
+    margin-right:10px;
+    margin-top:10px;
+}
+
+.crowdf-share-gshare{
+    float: left;
+    margin: 10px 10px 0px 5px;
+}
+
+.crowdf-share-reddit{
+    float:left;
+    margin:10px 0 0 15px;
+}
+.crowdf-share-reddit a:hover{
+    text-decoration: none !important;
+    background: none !important;
+}
+
+.crowdf-share-pinterest {
+    float:left;
+    margin: 10px 15px 0px 0px;
+}
+
+.crowdf-share-pinterest-above {
+    float:left;
+    margin: 30px 5px 0 10px;
+}
+
+.crowdf-share-buffer {
+    float:left;
+    margin-top:10px;
+}
+
+.crowdf-embeded input[type="text"] {
+    margin-top: 10px;
+    float: left;
+    padding: 5px;   
+    border: 1px solid #DDDDDD;
+    width: 50%;
+
+    /*Applying CSS3 gradient*/
+    background: -moz-linear-gradient(center top, #FFFFFF, #EEEEEE 1px, #FFFFFF 20px);
+    background: -webkit-gradient(linear, left top, left 20, from(#FFFFFF), color-stop(5%, #EEEEEE) to(#FFFFFF));
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FBFBFB', endColorstr='#FFFFFF');
+    
+    /*Applying CSS 3radius*/   
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    
+    /*Applying CSS3 box shadow*/
+    -moz-box-shadow: 0 0 2px #DDDDDD;
+    -webkit-box-shadow: 0 0 2px #DDDDDD;
+    box-shadow: 0 0 2px #DDDDDD;
+}
+
+.crowdf-embeded input[type="text"]:hover {
+    border:1px solid #cccccc;
+}
+.crowdf-embeded input[type="text"]:focus {
+    box-shadow:0 0 2px #3B3B43;
+}
+.crowdf-embeded .btn {
+    margin: 10px 0 0 10px;
+}
+
+
+@media (max-width: 1024px) {
+    .crowdf-embeded input[type="text"] {
+        width: 100%;
+    }
+}

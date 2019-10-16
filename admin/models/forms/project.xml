@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset addfieldpath="/administrator/components/com_categories/models/fields" name="basic">
+
+        <field name="title" type="text" class="input-xxlarge"
+               label="JGLOBAL_TITLE"
+               description="COM_CROWDFUNDING_FIELD_PROJECT_TITLE_DESC"
+               filter="trim"
+               required="true"
+                />
+
+        <field name="alias" type="text" class="input-xxlarge"
+               label="JFIELD_ALIAS_LABEL"
+               description="JFIELD_ALIAS_DESC"
+               />
+
+        <field name="catid" type="category"
+               label="JCATEGORY"
+               description="JFIELD_CATEGORY_DESC"
+               extension="com_crowdfunding"
+               />
+
+        <field name="type_id" type="cftypes"
+               label="COM_CROWDFUNDING_TYPE"
+               size="1"
+               filter="int"
+               >
+            <option value="0">COM_CROWDFUNDING_NONE</option>
+        </field>
+
+        <field name="location_preview" type="text"
+               label="COM_CROWDFUNDING_FIELD_LOCATION"
+               description="COM_CROWDFUNDING_FIELD_LOCATION_DESC"
+               size="40"
+               filter="trim"
+               />
+
+        <field name="published" type="list" class="chzn-color"
+               label="JSTATUS"
+               description="JFIELD_PUBLISHED_DESC"
+               filter="intval"
+               default="1"
+               >
+            <option value="1">JPUBLISHED</option>
+            <option value="0">JUNPUBLISHED</option>
+            <option value="-2">JTRASHED</option>
+        </field>
+
+        <field name="approved" type="radio" class="btn-group"
+               label="COM_CROWDFUNDING_APPROVED"
+               description="COM_CROWDFUNDING_APPROVED_DESCRIPTION"
+               filter="intval"
+               default="0"
+               >
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+
+        <field name="user_id" type="user"
+               label="COM_CROWDFUNDING_CREATED_BY"
+               description="COM_CROWDFUNDING_FIELD_USER_DESC"
+               filter="intval"
+               required="true"
+               />
+
+        <field name="created" type="calendar"
+               label="COM_CROWDFUNDING_CREATED"
+               description="COM_CROWDFUNDING_FIELD_CREATED_DESC"
+               default="now" />
+
+        <field name="id" type="text" class="readonly"
+               label="JGLOBAL_FIELD_ID_LABEL"
+               description="JGLOBAL_FIELD_ID_DESC"
+               readonly="true"
+               default="0"/>
+
+        <field name="short_desc" type="textarea" class="span12"
+               label="COM_CROWDFUNDING_SHORT_DESCRIPTION"
+               description="COM_CROWDFUNDING_SHORT_DESCRIPTION_DESC"
+               rows="10"
+               />
+
+        <field name="image" type="file"
+               label="COM_CROWDFUNDING_IMAGE"
+               description="COM_CROWDFUNDING_PROJECT_IMAGE_DESC"
+               />
+
+        <field name="access" type="accesslevel" label="JFIELD_ACCESS_LABEL" description="JFIELD_ACCESS_DESC" size="1" />
+
+        <field name="location_id" type="hidden" filter="int"/>
+
+    </fieldset>
+
+    <fieldset addfieldpath="/administrator/components/com_categories/models/fields" name="funding">
+        <field name="goal" type="cfgoal" css_layout="Bootstrap 2"
+               label="COM_CROWDFUNDING_GOAL"
+               description="COM_CROWDFUNDING_FIELD_GOAL_DESC"
+                />
+
+        <field name="funded" type="cfamount" css_layout="Bootstrap 2"
+               label="COM_CROWDFUNDING_FUNDED"
+               description="COM_CROWDFUNDING_FIELD_FUNDED_DESC"
+               />
+
+        <field name="funding_type" type="list"
+               label="COM_CROWDFUNDING_FUNDING_TYPE"
+               description="COM_CROWDFUNDING_FUNDING_TYPE_DESC"
+               size="1"
+               default="FIXED"
+                >
+            <option value="FIXED">FIXED</option>
+            <option value="FLEXIBLE">FLEXIBLE</option>
+        </field>
+
+        <field name="funding_days" type="text"
+               label="COM_CROWDFUNDING_FIELD_FUNDING_DAYS"
+               filter="trim"
+                />
+
+        <field name="funding_start" type="calendar"
+               label="COM_CROWDFUNDING_FIELD_FUNDING_START"
+               filter="trim"
+               default="NOW"
+               />
+
+        <field name="funding_end" type="calendar"
+               label="COM_CROWDFUNDING_FIELD_FUNDING_END"
+               filter="trim"
+               default="NOW"
+               />
+
+    </fieldset>
+
+    <fieldset addfieldpath="/administrator/components/com_categories/models/fields" name="story">
+
+        <field name="pitch_video" type="text" class="span12"
+               label="COM_CROWDFUNDING_PITCH_VIDEO"
+               description="COM_CROWDFUNDING_PITCH_VIDEO_DESC"
+               size="60"
+                />
+
+        <field name="pitch_image" type="file"
+               label="COM_CROWDFUNDING_PITCH_IMAGE"
+               description="COM_CROWDFUNDING_PITCH_IMAGE_DESC"
+                />
+
+        <field name="description" type="editor" buttons="false" show="toggle"
+               label="JGLOBAL_DESCRIPTION"
+               description="COM_CROWDFUNDING_FIELD_PROJECT_DESCRIPTION"
+               filter="safehtml"
+               class="span12"
+                />
+    </fieldset>
+
+    <fields name="params" label="JGLOBAL_OPTIONS">
+        <fieldset name="basic" label="JGLOBAL_OPTIONS">
+            <field name="show_author" type="list" class="chzn-color" label="JGLOBAL_SHOW_AUTHOR_LABEL" description="COM_CROWDFUNDING_SHOW_AUTHOR_DESC">
+                <option	value="">JGLOBAL_USE_GLOBAL</option>
+                <option	value="0">JHIDE</option>
+                <option	value="1">JSHOW</option>
+            </field>
+            <field name="show_description" default="" type="list" class="chzn-color" label="COM_CROWDFUNDING_SHOW_DESCRIPTION" description="COM_CROWDFUNDING_SHOW_SHORT_DESCRIPTION_DESC">
+                <option	value="">JGLOBAL_USE_GLOBAL</option>
+                <option	value="0">JHIDE</option>
+                <option	value="1">JSHOW</option>
+            </field>
+            <field name="title_length" type="text" default="" label="COM_CROWDFUNDING_TITLE_LENGTH" description="COM_CROWDFUNDING_TITLE_LENGTH_DESC" />
+            <field name="description_length" type="text" default="" label="COM_CROWDFUNDING_DESCRIPTION_LENGTH" description="COM_CROWDFUNDING_DESCRIPTION_LENGTH_DESC" />
+        </fieldset>
+    </fields>
+
+</form>

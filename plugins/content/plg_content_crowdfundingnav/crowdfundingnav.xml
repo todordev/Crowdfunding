@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.8" type="plugin" group="content" method="upgrade">
+    <name>PLG_CONTENT_CROWDFUNDINGNAV</name>
+    <author>Todor Iliev</author>
+    <copyright>Copyright (C) 2018 Todor Iliev ( ITPrism.com ). All rights reserved.</copyright>
+    <license>http://www.gnu.org/licenses/gpl-3.0.en.html GNU/GPLv3</license>
+    <authorEmail>todor@itprism.com</authorEmail>
+    <authorUrl>http://itprism.com</authorUrl>
+    <version>2.7.3</version>
+    <creationDate>08 March, 2018</creationDate>
+    <description><![CDATA[
+    <p>Crowdfunding - Navigation is a plugin that adds navigation on the page of project details.</p>
+    <p><a href="http://itprism.com/" target="_blank">Subscribe for the newsletter</a> to receive information about updates and new ITPrism extensions.</p>
+    ]]></description>
+    
+    <help url="PLG_CONTENT_CROWDFUNDINGNAV_HELP_URL"/>
+    
+    <files>
+        <filename plugin="crowdfundingnav">crowdfundingnav.php</filename>
+        <folder>language</folder>
+    </files>
+    
+    <config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="display_home" type="radio" default="1" label="PLG_CONTENT_CROWDFUNDINGNAV_DISPLAY_HOME" description="PLG_CONTENT_CROWDFUNDINGNAV_DISPLAY_HOME_DESC"  class="btn-group">
+                   <option value="0">JNO</option>
+                   <option value="1">JYES</option>
+                </field>
+                <field name="display_updates" type="radio" default="1" label="PLG_CONTENT_CROWDFUNDINGNAV_DISPLAY_UPDATES" description="PLG_CONTENT_CROWDFUNDINGNAV_DISPLAY_UPDATES_DESC"  class="btn-group">
+                   <option value="0">JNO</option>
+                   <option value="1">JYES</option>
+                </field>
+                <field name="display_comments" type="radio" default="1" label="PLG_CONTENT_CROWDFUNDINGNAV_DISPLAY_COMMENTS" description="PLG_CONTENT_CROWDFUNDINGNAV_DISPLAY_COMMENTS_DESC"  class="btn-group">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="display_funders" type="radio" default="1" label="PLG_CONTENT_CROWDFUNDINGNAV_DISPLAY_FUNDERS" description="PLG_CONTENT_CROWDFUNDINGNAV_DISPLAY_FUNDERS_DESC"  class="btn-group">
+                   <option value="0">JNO</option>
+                   <option value="1">JYES</option>
+                </field>
+			</fieldset>
+        </fields>
+	</config>
+</extension>

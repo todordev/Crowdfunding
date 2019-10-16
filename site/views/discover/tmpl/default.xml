@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+    <layout title="COM_CROWDFUNDING_VIEW_DISCOVER_TITLE">
+        <message>
+            <![CDATA[COM_CROWDFUNDING_VIEW_DISCOVER_DESC]]>
+        </message>
+    </layout>
+    
+    <!-- Add fields to the parameters object for the layout. -->
+    <fields name="params">
+        <!-- Basic options. -->
+        <fieldset name="basic" label="COM_MENUS_BASIC_FIELDSET_LABEL">
+            <field name="show_author" default="" type="list" class="chzn-color" label="JGLOBAL_SHOW_AUTHOR_LABEL" description="COM_CROWDFUNDING_SHOW_AUTHOR_DESC">
+                <option	value="">JGLOBAL_USE_GLOBAL</option>
+                <option	value="0">JHIDE</option>
+                <option	value="1">JSHOW</option>
+            </field>
+            <field name="show_description" default="" type="list" class="chzn-color" label="COM_CROWDFUNDING_SHOW_DESCRIPTION" description="COM_CROWDFUNDING_SHOW_SHORT_DESCRIPTION_DESC">
+                <option	value="">JGLOBAL_USE_GLOBAL</option>
+                <option	value="0">JHIDE</option>
+                <option	value="1">JSHOW</option>
+            </field>
+            <field name="title_length" type="text" default="" label="COM_CROWDFUNDING_TITLE_LENGTH" description="COM_CROWDFUNDING_TITLE_LENGTH_DESC" />
+            <field name="description_length" type="text" default="" label="COM_CROWDFUNDING_DESCRIPTION_LENGTH" description="COM_CROWDFUNDING_DESCRIPTION_LENGTH_DESC" />
+            <field name="items_row" type="text" default="3" label="COM_CROWDFUNDING_ITEMS_ROW" description="COM_CROWDFUNDING_ITEMS_ROW_DESC" />
+            <field name="items_limit" type="text" default="20" label="COM_CROWDFUNDING_ITEMS_LIMIT" description="COM_CROWDFUNDING_ITEMS_LIMIT_DESC" />
+            <field name="items_order" type="list" default="ordering" label="COM_CROWDFUNDING_ITEMS_ORDER" description="COM_CROWDFUNDING_ITEMS_ORDER_DESC">
+                <option value="0">COM_CROWDFUNDING_ORDERING</option>
+                <option value="2">COM_CROWDFUNDING_ADDED</option>
+                <option value="3">COM_CROWDFUNDING_START_DATE</option>
+            </field>
+            <field name="items_order_direction" type="list" default="desc" label="COM_CROWDFUNDING_ITEMS_ORDER_DIRECTION" description="COM_CROWDFUNDING_ITEMS_ORDER_DIRECTION_DESC">
+                <option value="asc">COM_CROWDFUNDING_ASCENDING</option>
+                <option value="desc">COM_CROWDFUNDING_DESCENDING</option>
+            </field>
+            <field name="show_pagination" type="list" description="JGLOBAL_PAGINATION_DESC" label="JGLOBAL_PAGINATION_LABEL">
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="0">JHIDE</option>
+                <option value="1">JSHOW</option>
+                <option value="2">JGLOBAL_AUTO</option>
+            </field>
+
+            <field name="show_pagination_results" type="list" label="JGLOBAL_PAGINATION_RESULTS_LABEL" description="JGLOBAL_PAGINATION_RESULTS_DESC">
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="0">JHIDE</option>
+                <option value="1">JSHOW</option>
+            </field>
+        </fieldset>
+    </fields>
+    
+</metadata>

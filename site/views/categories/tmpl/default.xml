@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+    <layout title="COM_CROWDFUNDING_VIEW_CATEGORIES">
+        <message>
+            <![CDATA[COM_CROWDFUNDING_VIEW_CATEGORIES_DESC]]>
+        </message>
+    </layout>
+
+    <!-- Add fields to the parameters object for the layout. -->
+    <fields name="params">
+        <!-- Basic options. -->
+        <fieldset name="basic" label="COM_MENUS_BASIC_FIELDSET_LABEL">
+            <field name="items_row" type="text" default="3" label="COM_CROWDFUNDING_ITEMS_ROW" description="COM_CROWDFUNDING_ITEMS_ROW_DESC" />
+            <field name="items_limit" type="text" default="20" label="COM_CROWDFUNDING_ITEMS_LIMIT" description="COM_CROWDFUNDING_ITEMS_LIMIT_DESC" />
+            <field name="items_order" type="list" default="ordering" label="COM_CROWDFUNDING_ITEMS_ORDER" description="COM_CROWDFUNDING_ITEMS_ORDER_DESC">
+                <option value="ordering">COM_CROWDFUNDING_ORDERING</option>
+                <option value="start_date">COM_CROWDFUNDING_START_DATE</option>
+                <option value="added">COM_CROWDFUNDING_CREATED_DATE</option>
+            </field>
+            <field name="items_order_direction" type="list" default="desc" label="COM_CROWDFUNDING_ITEMS_ORDER_DIRECTION" description="COM_CROWDFUNDING_ITEMS_ORDER_DIRECTION_DESC">
+                <option value="asc">COM_CROWDFUNDING_ASCENDING</option>
+                <option value="desc">COM_CROWDFUNDING_DESCENDING</option>
+            </field>
+            <field name="display_subcategories" type="radio" default="0" label="COM_CROWDFUNDING_SHOW_SUBCATEGORIES" description="COM_CROWDFUNDING_SHOW_SUBCATEGORIES_DESC" class="btn-group">
+                <option value="0">JNO</option>
+                <option value="1">JYES</option>
+            </field>
+            <field name="show_pagination" type="list" description="JGLOBAL_PAGINATION_DESC" label="JGLOBAL_PAGINATION_LABEL">
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="0">JHIDE</option>
+                <option value="1">JSHOW</option>
+                <option value="2">JGLOBAL_AUTO</option>
+            </field>
+
+            <field name="show_pagination_results" type="list"
+                   label="JGLOBAL_PAGINATION_RESULTS_LABEL"
+                   description="JGLOBAL_PAGINATION_RESULTS_DESC">
+
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="0">JHIDE</option>
+                <option value="1">JSHOW</option>
+            </field>
+        </fieldset>
+    </fields>
+</metadata>

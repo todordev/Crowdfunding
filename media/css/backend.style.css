@@ -1,0 +1,68 @@
+@CHARSET "UTF-8";
+
+/***** Extra images *****/
+
+#js-extra-images-rows {
+	margin-top: 50px;
+}
+
+.extra-image-row {
+	border: thin solid #dcdcdc;
+	margin: 20px 0;
+}
+
+.extra-image-row img, .extra-image-row a {
+	margin: 10px;
+}
+
+.extra-image-row:hover {
+	background: #eaeaea;
+}
+
+/** Funding Duration **/
+
+#jform_funding_days-lbl, #jform_funding_end-lbl {
+    display: inline !important;
+}
+
+/** Dashboard **/
+
+
+.cf-upgrade-info a {
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+/* Statistics */
+.dashboard-stats .span4, .dashboard-stats .span6, .dashboard-stats .span8{
+    border: thin solid #dcdcdc;
+    margin-bottom: 10px;
+}
+
+.dashboard-stats h3 {
+	background: url(../images/icon_list.png) no-repeat left;
+	margin:0;
+	padding: 5px 0 5px 20px;
+}
+
+div.latest-started {
+	background-color: #e7e7e7;
+}
+
+div.latest-created {
+	background-color: #cde9ef;
+}
+
+div.popular {
+	background-color: #ffe4c4;
+}
+
+div.mostfunded {
+	background-color: #e6e6fa;
+}
+
+.cf-response-type {
+	font: bold medium;
+	text-transform: uppercase;
+	background-color: #ffefd5;
+}

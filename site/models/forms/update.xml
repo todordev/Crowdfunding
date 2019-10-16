@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset name="update">
+
+        <field name="title" type="text" class="form-control"
+               label="COM_CROWDFUNDING_FIELD_TITLE"
+               size="40"
+               filter="trim"
+               required="true"
+                />
+
+        <field name="description" type="textarea" class="form-control"
+               label="COM_CROWDFUNDING_DESCRIPTION"
+               description="COM_CROWDFUNDING_FIELD_UPDATE_DESCRIPTION_DESC"
+               filter="trim"
+               rows="5"
+               required="true"
+                />
+
+        <field name="id" type="hidden" filter="int"/>
+        <field name="project_id" type="hidden" filter="int"/>
+
+    </fieldset>
+</form>

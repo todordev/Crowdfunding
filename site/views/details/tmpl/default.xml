@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+    <layout title="COM_CROWDFUNDING_VIEW_DETAILS">
+        <message>
+            <![CDATA[COM_CROWDFUNDING_VIEW_DETAILS_DESC]]>
+        </message>
+    </layout>
+    
+    <!-- Add fields to the request variables for the layout. -->
+    <fields name="request">
+        <fieldset name="request" addfieldpath="/administrator/components/com_crowdfunding/models/fields" >
+            <field name="id" type="cfprojects" label="COM_CROWDFUNDING_PROJECT_FIELD_TITLE" />
+        </fieldset>
+    </fields>
+</metadata>

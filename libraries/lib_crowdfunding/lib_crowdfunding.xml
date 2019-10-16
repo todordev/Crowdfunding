@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension type="library" version="3.8" method="upgrade">
+    <name>Crowdfunding Library</name>
+    <libraryname>Crowdfunding</libraryname>
+    <author>Todor Iliev</author>
+    <authorEmail>todor@itprism.com</authorEmail>
+    <authorUrl>http://itprism.com</authorUrl>
+    <copyright>Copyright (C) 2018 Todor Iliev ( ITPrism.com ). All rights reserved.</copyright>
+    <license>http://www.gnu.org/licenses/gpl-3.0.en.html GNU/GPLv3</license>
+    <packager>ITPrism</packager>
+    <packagerurl>http://itprism.com</packagerurl>
+    <version>2.7.3</version>
+    <creationDate>08 March, 2018</creationDate>
+    <description>Crowdfunding Library</description>
+
+    <files>
+        <folder>Category</folder>
+        <folder>Container</folder>
+        <folder>Country</folder>
+        <folder>Currency</folder>
+        <folder>Data</folder>
+        <folder>Facade</folder>
+        <folder>Helper</folder>
+        <folder>Location</folder>
+        <folder>Log</folder>
+        <folder>Observer</folder>
+        <folder>Payment</folder>
+        <folder>Project</folder>
+        <folder>Region</folder>
+        <folder>Reward</folder>
+        <folder>Statistics</folder>
+        <folder>Tip</folder>
+        <folder>Transaction</folder>
+        <folder>User</folder>
+        <folder>Utilities</folder>
+        <folder>Validator</folder>
+
+        <file>Amount.php</file>
+        <file>Categories.php</file>
+        <file>Constants.php</file>
+        <file>Date.php</file>
+        <file>Filters.php</file>
+        <file>init.php</file>
+        <file>Intention.php</file>
+        <file>Location.php</file>
+        <file>Locations.php</file>
+        <file>Project.php</file>
+        <file>Projects.php</file>
+        <file>Reward.php</file>
+        <file>Rewards.php</file>
+        <file>Type.php</file>
+        <file>Types.php</file>
+        <file>Update.php</file>
+        <file>Updates.php</file>
+        <file>Version.php</file>
+    </files>
+
+</extension>

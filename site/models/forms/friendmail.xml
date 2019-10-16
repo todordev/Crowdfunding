@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset name="friendmail">
+        <field name="subject" type="text" class="form-control"
+               label="COM_CROWDFUNDING_SUBJECT"
+               description="COM_CROWDFUNDING_FIELD_FRIEND_MAIL_SUBJECT_DESC"
+               filter="trim"
+               required="true"
+                />
+
+        <field name="sender_name" type="text" class="form-control"
+               label="COM_CROWDFUNDING_SENDER_NAME"
+               description="COM_CROWDFUNDING_SENDER_NAME_DESC"
+               filter="trim"
+               required="true"
+                />
+
+        <field name="sender" type="email" class="form-control"
+               label="COM_CROWDFUNDING_SENDER_MAIL"
+               description="COM_CROWDFUNDING_SENDER_MAIL_DESC"
+               filter="trim"
+               required="true"
+               validate="email"
+                />
+
+        <field name="receiver" type="email" class="form-control"
+               label="COM_CROWDFUNDING_RECEIVER_MAIL"
+               description="COM_CROWDFUNDING_RECEIVER_MAIL_DESC"
+               filter="trim"
+               required="true"
+               validate="email"
+                />
+
+        <field name="message" type="textarea" class="form-control"
+               label="COM_CROWDFUNDING_MESSAGE"
+               filter="trim"
+               rows="5"
+               required="true"
+                />
+
+        <field name="captcha" type="captcha"
+               label="COM_CROWDFUNDING_CAPTCHA_LABEL"
+               description="COM_CROWDFUNDING_FRONT_CAPTCHA_DESC"
+               validate="captcha"
+                />
+
+        <field name="id" type="hidden" filter="int"/>
+    </fieldset>
+</form>

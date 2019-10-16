@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+    <layout title="COM_CROWDFUNDING_VIEW_REPORT">
+        <message>
+            <![CDATA[COM_CROWDFUNDING_VIEW_REPORT_DESC]]>
+        </message>
+    </layout>
+</metadata>

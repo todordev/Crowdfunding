@@ -1,0 +1,9 @@
+{
+  "id": 2,
+  "alias": "paypal",
+  "data": {
+    "preapproval_key": "PA_KEY_123456"
+  },
+  "token": "T123456789",
+  "order_id": "OID_1234"
+}

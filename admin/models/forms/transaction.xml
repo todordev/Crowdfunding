@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset name="update">
+        <field name="investor_id" type="user"
+               label="COM_CROWDFUNDING_BACKER"
+               description="COM_CROWDFUNDING_TXN_SENDER_DESC"
+               filter="int"
+                />
+
+        <field name="receiver_id" type="user"
+               label="COM_CROWDFUNDING_BENEFICIARY"
+               description="COM_CROWDFUNDING_TXN_BENEFICIARY_DESC"
+               filter="int"
+               required="true"
+        />
+
+        <field name="project_id" type="cfproject"
+               label="COM_CROWDFUNDING_PROJECT"
+               description="COM_CROWDFUNDING_TXN_PROJECT_DESC"
+               filter="int"
+               required="true"
+        />
+
+        <field name="reward_id" type="cfreward"
+               label="COM_CROWDFUNDING_REWARD"
+               description="COM_CROWDFUNDING_TXN_REWARD_DESC"
+               filter="int"
+        />
+
+        <field name="txn_amount" type="text"
+               label="COM_CROWDFUNDING_AMOUNT"
+               description="COM_CROWDFUNDING_TXN_AMOUNT_DESC"
+               required="true"
+               hint="100.00"
+               />
+
+        <field name="txn_currency" type="text"
+               label="COM_CROWDFUNDING_CURRENCY"
+               description="COM_CROWDFUNDING_TXN_CURRENCY_DESC"
+               filter="trim"
+               required="true"
+               hint="EUR"
+                />
+
+        <field name="txn_date" type="text"
+               label="COM_CROWDFUNDING_DATETIME"
+               description="COM_CROWDFUNDING_TXN_DATETIME_DESC"
+               filter="trim"
+               hint="2017-02-29 18:45:02"
+        />
+
+        <field name="service_provider" type="text"
+               label="COM_CROWDFUNDING_PAYMENT_GETAWAY"
+               description="COM_CROWDFUNDING_PAYMENT_GATEWAY_DESC"
+               filter="trim"
+               required="true"
+               hint="PayPal"
+               />
+
+        <field name="service_alias" type="text"
+               label="COM_CROWDFUNDING_SERVICE_ALIAS"
+               description="COM_CROWDFUNDING_SERVICE_ALIAS_DESC"
+               filter="trim"
+               required="true"
+               hint="paypal"
+        />
+
+        <field name="txn_status" type="list"
+               label="COM_CROWDFUNDING_PAYMENT_STATUS"
+               description="COM_CROWDFUNDING_TXN_STATUS_DESC"
+               filter="trim"
+               required="true"
+                >
+            <option value="pending">COM_CROWDFUNDING_PENDING</option>
+            <option value="completed">COM_CROWDFUNDING_COMPLETED</option>
+            <option value="canceled">COM_CROWDFUNDING_CANCELED</option>
+            <option value="refunded">COM_CROWDFUNDING_REFUNDED</option>
+            <option value="failed">COM_CROWDFUNDING_FAILED</option>
+        </field>
+
+        <field name="txn_id" type="text"
+               label="COM_CROWDFUNDING_TXN_ID"
+               description="COM_CROWDFUNDING_TXN_ID_DESC"
+               filter="trim"
+               required="true"
+               hint="TXN1234567890"
+                />
+
+        <field name="parent_txn_id" type="text"
+               label="COM_CROWDFUNDING_PARENT_TXN_ID"
+               description="COM_CROWDFUNDING_PARENT_TXN_ID_DESC"
+               filter="trim"
+                />
+
+        <field name="id" type="text" class="readonly"
+               label="JGLOBAL_FIELD_ID_LABEL"
+               description="JGLOBAL_FIELD_ID_DESC"
+               default="0"
+               readonly="true"
+                />
+
+    </fieldset>
+</form>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+    <layout title="COM_CROWDFUNDING_VIEW_CATEGORY_TITLE">
+        <message>
+            <![CDATA[COM_CROWDFUNDING_VIEW_CATEGORY_DESC]]>
+        </message>
+    </layout>
+    
+    <!-- Add fields to the request variables for the layout. -->
+    <fields name="request">
+        <fieldset name="request">
+        
+	        <field name="id" type="category"
+	            default="0"
+	            label="COM_CROWDFUNDING_FIELD_SELECT_CATEGORY_LABEL"
+	            extension="com_crowdfunding"
+	            required="true"
+	        />
+	        
+        </fieldset>
+    </fields>
+    
+    <!-- Add fields to the parameters object for the layout. -->
+    <fields name="params">
+        <!-- Basic options. -->
+        <fieldset name="basic" label="COM_MENUS_BASIC_FIELDSET_LABEL">
+            <field name="category_show_description" default="" type="list" label="COM_CROWDFUNDING_SHOW_DESCRIPTION" description="COM_CROWDFUNDING_SHOW_CATEGORY_DESCRIPTION_DESC" class="chzn-color" >
+                <option	value="">JGLOBAL_USE_GLOBAL</option>
+                <option	value="0">JHIDE</option>
+                <option	value="1">JSHOW</option>
+            </field>
+            <field name="category_show_subcategories" type="list" default="" label="COM_CROWDFUNDING_SHOW_SUBCATEGORIES" description="COM_CROWDFUNDING_SHOW_SUBCATEGORIES_DESC" class="chzn-color">
+                <option	value="">JGLOBAL_USE_GLOBAL</option>
+                <option	value="0">JHIDE</option>
+                <option	value="1">JSHOW</option>
+            </field>
+            <field name="subcategory_show_title" type="list" default="" label="COM_CROWDFUNDING_SUBCATEGORY_TITLE" description="COM_CROWDFUNDING_SUBCATEGORY_TITLE_DESC" class="chzn-color" >
+                <option	value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="0">JHIDE</option>
+                <option value="1">JSHOW</option>
+            </field>
+            <field name="subcategory_show_description" type="list" default="" label="COM_CROWDFUNDING_SUBCATEGORY_DESCRIPTION" description="COM_CROWDFUNDING_SUBCATEGORY_DESCRIPTION_DESC" class="chzn-color" >
+                <option	value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="0">JHIDE</option>
+                <option value="1">JSHOW</option>
+            </field>
+            <field name="subcategory_show_image" type="list" default="" label="COM_CROWDFUNDING_SUBCATEGORY_IMAGE" description="COM_CROWDFUNDING_SUBCATEGORY_IMAGE_DESC" class="chzn-color" >
+                <option	value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="0">JHIDE</option>
+                <option value="1">JSHOW</option>
+            </field>
+            <field name="subcategory_title_length" type="text" default="" label="COM_CROWDFUNDING_SUBCATEGORY_TITLE_LENGTH" description="COM_CROWDFUNDING_SUBCATEGORY_TITLE_LENGTH_DESC" />
+            <field name="subcategory_description_length" type="text" default="" label="COM_CROWDFUNDING_SUBCATEGORY_DESCRIPTION_LENGTH" description="COM_CROWDFUNDING_SUBCATEGORY_DESCRIPTION_LENGTH_DESC" />
+        </fieldset>
+
+        <fieldset name="projects" label="COM_CROWDFUNDING_PROJECT_OPTIONS">
+            <field name="show_author" default="" type="list" class="chzn-color" label="JGLOBAL_SHOW_AUTHOR_LABEL" description="COM_CROWDFUNDING_SHOW_AUTHOR_DESC">
+                <option	value="">JGLOBAL_USE_GLOBAL</option>
+                <option	value="0">JHIDE</option>
+                <option	value="1">JSHOW</option>
+            </field>
+            <field name="show_description" default="" type="list" class="chzn-color" label="COM_CROWDFUNDING_SHOW_DESCRIPTION" description="COM_CROWDFUNDING_SHOW_SHORT_DESCRIPTION_DESC">
+                <option	value="">JGLOBAL_USE_GLOBAL</option>
+                <option	value="0">JHIDE</option>
+                <option	value="1">JSHOW</option>
+            </field>
+            <field name="title_length" type="text" default="" label="COM_CROWDFUNDING_TITLE_LENGTH" description="COM_CROWDFUNDING_TITLE_LENGTH_DESC" />
+            <field name="description_length" type="text" default="" label="COM_CROWDFUNDING_DESCRIPTION_LENGTH" description="COM_CROWDFUNDING_DESCRIPTION_LENGTH_DESC" />
+            <field name="items_row" type="text" default="3" label="COM_CROWDFUNDING_ITEMS_ROW" description="COM_CROWDFUNDING_ITEMS_ROW_DESC" />
+            <field name="items_limit" type="text" default="20" label="COM_CROWDFUNDING_ITEMS_LIMIT" description="COM_CROWDFUNDING_ITEMS_LIMIT_DESC" />
+            <field name="items_order" type="list" default="ordering" label="COM_CROWDFUNDING_ITEMS_ORDER" description="COM_CROWDFUNDING_ITEMS_ORDER_DESC">
+                <option value="0">COM_CROWDFUNDING_ORDERING</option>
+                <option value="2">COM_CROWDFUNDING_CREATED_DATE</option>
+                <option value="3">COM_CROWDFUNDING_START_DATE</option>
+            </field>
+            <field name="items_order_direction" type="list" default="desc" label="COM_CROWDFUNDING_ITEMS_ORDER_DIRECTION" description="COM_CROWDFUNDING_ITEMS_ORDER_DIRECTION_DESC">
+                <option value="asc">COM_CROWDFUNDING_ASCENDING</option>
+                <option value="desc">COM_CROWDFUNDING_DESCENDING</option>
+            </field>
+            <field name="show_pagination" type="list" class="chzn-color" description="JGLOBAL_PAGINATION_DESC" label="JGLOBAL_PAGINATION_LABEL">
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="0">JHIDE</option>
+                <option value="1">JSHOW</option>
+                <option value="2">JGLOBAL_AUTO</option>
+            </field>
+            <field name="show_pagination_results" type="list" class="chzn-color" label="JGLOBAL_PAGINATION_RESULTS_LABEL" description="JGLOBAL_PAGINATION_RESULTS_DESC">
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="0">JHIDE</option>
+                <option value="1">JSHOW</option>
+            </field>
+        </fieldset>
+
+    </fields>
+    
+</metadata>

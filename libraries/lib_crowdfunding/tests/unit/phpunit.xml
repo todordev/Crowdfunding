@@ -1,0 +1,16 @@
+<phpunit bootstrap="bootstrap.php">
+    <testsuites>
+        <testsuite name="project">
+            <file>suites/library/Project/ProjectTest.php</file>
+            <!--<file>suites/library/Project/ProjectDatabaseTest.php</file>-->
+        </testsuite>
+        <testsuite name="currency">
+            <file>suites/library/Currency/CurrencyTest.php</file>
+            <file>suites/library/Currency/CurrenciesTest.php</file>
+        </testsuite>
+        <testsuite name="payment">
+            <file>suites/library/Payment/SessionTest.php</file>
+            <file>suites/library/Payment/GatewayDataTest.php</file>
+        </testsuite>
+    </testsuites>
+</phpunit>

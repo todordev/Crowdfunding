@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.8" client="site" method="upgrade">
+	<name>MOD_CROWDFUNDINGDETAILS</name>
+	<author>Todor Iliev</author>
+	<copyright>Copyright (C) 2018 Todor Iliev ( ITPrism.com )</copyright>
+	<license>http://www.gnu.org/licenses/gpl-3.0.en.html GNU/GPLv3</license>
+	<authorEmail>todor@itprism.com</authorEmail>
+	<authorUrl>http://itprism.com</authorUrl>
+	<version>2.7.3</version>
+	<creationDate>08 March, 2018</creationDate>
+	<description><![CDATA[
+    <p>Crowdfunding Details is a module that displays short information about project.</p>
+    <p><a href="http://itprism.com/" target="_blank">Subscribe for the newsletter</a> to receive <strong>gifts</strong>, <strong>discount codes</strong>, information about <strong>updates</strong> and information about <strong>new ITPrism extensions</strong>.</p>
+    ]]></description>
+	
+    <help url="MOD_CROWDFUNDINGDETAILS_HELP_URL"/>
+
+	<files>
+	   <filename module="mod_crowdfundingdetails">mod_crowdfundingdetails.php</filename>
+
+        <folder>language</folder>
+		<folder>tmpl</folder>
+	</files>
+	
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="show_author" default="" type="list" class="chzn-color" label="JGLOBAL_SHOW_AUTHOR_LABEL" description="MOD_CROWDFUNDINGDETAILS_SHOW_AUTHOR_DESC">
+					<option	value="">JGLOBAL_USE_GLOBAL</option>
+					<option	value="0">JHIDE</option>
+					<option	value="1">JSHOW</option>
+				</field>
+				<field name="show_description" default="" type="list" class="chzn-color" label="MOD_CROWDFUNDINGDETAILS_SHOW_DESCRIPTION" description="MOD_CROWDFUNDINGDETAILS_SHOW_DESCRIPTION_DESC">
+					<option	value="">JGLOBAL_USE_GLOBAL</option>
+					<option	value="0">JHIDE</option>
+					<option	value="1">JSHOW</option>
+				</field>
+				<field name="title_length" type="text" default="" label="MOD_CROWDFUNDINGDETAILS_TITLE_LENGTH" description="MOD_CROWDFUNDINGDETAILS_TITLE_LENGTH_DESC"/>
+				<field name="description_length" type="text" label="MOD_CROWDFUNDINGDETAILS_DESCRIPTION_LENGTH" description="MOD_CROWDFUNDINGDETAILS_DESCRIPTION_LENGTH_DESC" default="" />
+			</fieldset>
+
+			<fieldset name="advanced">
+                <field
+                    name="moduleclass_sfx"
+                    type="text"
+                    label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+                    description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+                    
+                <field
+                    name="cache"
+                    type="list"
+                    default="0"
+                    label="COM_MODULES_FIELD_CACHING_LABEL"
+                    description="COM_MODULES_FIELD_CACHING_DESC">
+                    <option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+                </field>
+            </fieldset>
+            
+		</fields>
+	</config>
+</extension>

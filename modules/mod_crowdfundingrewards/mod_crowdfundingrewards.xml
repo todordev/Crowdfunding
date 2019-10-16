@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.8" client="site" method="upgrade">
+	<name>MOD_CROWDFUNDINGREWARDS</name>
+	<author>Todor Iliev</author>
+	<copyright>Copyright (C) 2018 Todor Iliev ( ITPrism.com )</copyright>
+	<license>http://www.gnu.org/licenses/gpl-3.0.en.html GNU/GPLv3</license>
+	<authorEmail>todor@itprism.com</authorEmail>
+	<authorUrl>http://itprism.com</authorUrl>
+	<version>2.7.3</version>
+	<creationDate>08 March, 2018</creationDate>
+	<description><![CDATA[
+    <p>Crowdfunding Rewards is a module that displays project rewards.</p>
+    <p><a href="http://itprism.com/" target="_blank">Subscribe for the newsletter</a> to receive <strong>gifts</strong>, <strong>discount codes</strong>, information about <strong>updates</strong> and information about <strong>new ITPrism extensions</strong>.</p>
+    ]]></description>
+	
+    <help url="MOD_CROWDFUNDINGREWARDS_HELP_URL"/>
+
+	<files>
+	    <filename module="mod_crowdfundingrewards">mod_crowdfundingrewards.php</filename>
+        <filename>helper.php</filename>
+		
+        <folder>language</folder>
+        <folder>tmpl</folder>
+	</files>
+	
+	<config>
+		<fields name="params">
+            <fieldset name="basic">
+                <field name="display_funders" type="radio" class="btn-group"
+                       label="MOD_CROWDFUNDINGREWARDS_DISPLAY_FUNDERS"
+                       description="MOD_CROWDFUNDINGREWARDS_DISPLAY_FUNDERS_DESC"
+                       default="0">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+
+                <field name="display_claimed" type="radio" class="btn-group"
+                       label="MOD_CROWDFUNDINGREWARDS_DISPLAY_CLAIMED"
+                       description="MOD_CROWDFUNDINGREWARDS_DISPLAY_CLAIMED_DESC"
+                       default="0">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+
+                <field name="display_delivery_date" type="radio" class="btn-group"
+                       label="MOD_CROWDFUNDINGREWARDS_DISPLAY_DELIVERY_DATE"
+                       description="MOD_CROWDFUNDINGREWARDS_DISPLAY_DELIVERY_DATE_DESC"
+                       default="0">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+            </fieldset>
+
+			<fieldset name="advanced">
+                <field
+                        name="layout"
+                        type="modulelayout"
+                        label="JFIELD_ALT_LAYOUT_LABEL"
+                        description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+                <field
+                    name="moduleclass_sfx"
+                    type="text"
+                    label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+                    description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+                    
+                <field
+                    name="cache"
+                    type="list"
+                    default="0"
+                    label="COM_MODULES_FIELD_CACHING_LABEL"
+                    description="COM_MODULES_FIELD_CACHING_DESC">
+                    <option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+                </field>
+               
+            </fieldset>
+            
+		</fields>
+	</config>
+</extension>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset name="funding" label="COM_CROWDFUNDING_FUNDING_DEFAULT_LABEL"
+              addfieldpath="/administrator/components/com_crowdfunding/models/fields">
+
+        <field name="pitch_video" type="text"
+               label="COM_CROWDFUNDING_FIELD_FUNDING_VIDEO"
+               description="COM_CROWDFUNDING_FIELD_FUNDING_VIDEO_DESC"
+               class="form-control"
+               validate="url"
+                />
+
+        <field name="pitch_image" type="file"
+               label="COM_CROWDFUNDING_FIELD_FUNDING_IMAGE"
+               description="COM_CROWDFUNDING_FIELD_FUNDING_IMAGE_DESC"
+                />
+
+        <field name="description" type="editor" buttons="false" show="toggle"
+               label="COM_CROWDFUNDING_FIELD_FUNDING_DESCRIPTION"
+               description="COM_CROWDFUNDING_FIELD_FUNDING_DESCRIPTION_DESC"
+               required="true"
+               filter="safehtml"
+               class="form-control"
+               height="400"
+                />
+
+        <field name="id" type="hidden" filter="int"/>
+
+    </fieldset>
+</form>

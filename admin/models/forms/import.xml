@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset>
+
+        <field name="data" type="file"
+               label="COM_CROWDFUNDING_FILE"
+               description="COM_CROWDFUNDING_FILE_DESC"
+               required="true"/>
+
+        <field name="reset_id" type="checkbox"
+               label="COM_CROWDFUNDING_RESET_ID"
+               description="COM_CROWDFUNDING_RESET_ID_DESC"
+               filter="int"
+               value="1"
+                />
+
+        <field name="remove_old" type="checkbox"
+               label="COM_CROWDFUNDING_REMOVE_OLD"
+               description="COM_CROWDFUNDING_REMOVE_OLD_DESC"
+               filter="int"
+               value="1"
+                />
+
+        <field name="minimum_population" type="text"
+               label="COM_CROWDFUNDING_MINIMUM_POPULATION"
+               description="COM_CROWDFUNDING_MINIMUM_POPULATION_DESC"
+               filter="int"
+               default="0"
+                />
+
+        <field name="country" type="cfcountries"
+               label="COM_CROWDFUNDING_COUNTRY"
+               description="COM_CROWDFUNDING_IMPORT_COUNTRY_DESC"
+               index="code"
+        >
+            <option value="">COM_CROWDFUNDING_SELECT_COUNTRY</option>
+        </field>
+
+    </fieldset>
+</form>

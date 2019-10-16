@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+    <layout title="COM_CROWDFUNDING_VIEW_FRIEND_MAIL_TITLE">
+        <message>
+            <![CDATA[COM_CROWDFUNDING_VIEW_FRIEND_MAIL_DESC]]>
+        </message>
+    </layout>
+</metadata>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset addfieldpath="/administrator/components/com_crowdfunding/models/fields">
+
+        <field name="title" type="text"
+               label="JGLOBAL_TITLE"
+               description="COM_CROWDFUNDING_FIELD_PROJECT_TITLE_DESC"
+               class="span6"
+               filter="trim"
+               required="true"
+               />
+
+        <field name="description" type="textarea"
+               label="COM_CROWDFUNDING_FIELD_DESCRIPTION"
+               description="COM_CROWDFUNDING_REWARD_DESCRIPTION_DESC"
+               class="span6"
+               rows="10"
+               />
+
+        <field name="amount" type="cfamount"
+               label="COM_CROWDFUNDING_AMOUNT"
+               description="COM_CROWDFUNDING_REWARD_AMOUNT_DESC"
+               required="true"
+               />
+
+        <field name="number" type="text"
+               label="COM_CROWDFUNDING_NUMBER"
+               description="COM_CROWDFUNDING_REWARD_NUMBER_DESC"
+               />
+
+        <field name="distributed" type="text"
+               label="COM_CROWDFUNDING_DISTRIBUTED"
+               description="COM_CROWDFUNDING_REWARD_DISTRIBUTED_DESC"
+               />
+
+        <field name="delivery" type="calendar"
+               label="COM_CROWDFUNDING_DELIVERY"
+               description="COM_CROWDFUNDING_REWARD_DELIVERY_DESC"
+               />
+
+        <field name="image" type="file"
+               label="COM_CROWDFUNDING_IMAGE"
+               description="COM_CROWDFUNDING_FIELD_REWARD_IMAGE_DESC"
+               />
+
+        <field name="published" type="list"
+               label="JSTATUS"
+               description="JFIELD_PUBLISHED_DESC"
+               filter="intval"
+               size="1"
+               default="1"
+               >
+            <option value="1">JPUBLISHED</option>
+            <option value="0">JUNPUBLISHED</option>
+            <option value="-2">JTRASHED</option>
+        </field>
+
+        <field name="id" type="text" class="readonly"
+               label="JGLOBAL_FIELD_ID_LABEL"
+               description="JGLOBAL_FIELD_ID_DESC"
+               readonly="true"
+               default="0"/>
+
+        <field name="project_id" type="hidden"/>
+
+    </fieldset>
+</form>

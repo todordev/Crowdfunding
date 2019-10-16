@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset>
+
+        <field name="title" type="text"
+               label="COM_CROWDFUNDING_TITLE"
+               description="COM_CROWDFUNDING_TYPE_TITLE_DESCRIPTION"
+               filter="trim"
+               required="true"
+                />
+
+        <field name="description" type="textarea" class="span6"
+               label="COM_CROWDFUNDING_DESCRIPTION"
+               description="COM_CROWDFUNDING_TYPE_DESCRIPTION_DESC"
+               filter="trim"
+               required="true"
+               rows="5"
+                />
+
+        <field name="id" type="text" class="readonly"
+               label="JGLOBAL_FIELD_ID_LABEL"
+               description="JGLOBAL_FIELD_ID_DESC"
+               default="0"
+               readonly="true"
+                />
+
+    </fieldset>
+
+    <fields name="params" label="JGLOBAL_FIELDSET_DISPLAY_OPTIONS">
+
+        <fieldset name="basic">
+
+            <field name="rewards_enabled" type="radio" class="btn-group"
+                   label="COM_CROWDFUNDING_REWARDS_ENABLED"
+                   description="COM_CROWDFUNDING_TYPE_PARAMS_REWARDS_DESC"
+                   filter="intval"
+                   default="1">
+                <option value="0">JNO</option>
+                <option value="1">JYES</option>
+            </field>
+
+        </fieldset>
+
+    </fields>
+
+</form>

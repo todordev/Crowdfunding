@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="filter" addfieldpath="/administrator/components/com_crowdfunding/models/fields">
+		<field
+			name="search"
+			type="text"
+			label="COM_CROWDFUNDING_SEARCH_IN_TITLE"
+			description="COM_CROWDFUNDING_SEARCH_IN_PROJECTS_TOOLTIP"
+		/>
+		<field
+			name="state"
+			type="status"
+			label="COM_CROWDFUNDING_FILTER_PUBLISHED"
+			description="COM_CROWDFUNDING_FILTER_PUBLISHED_DESC"
+			onchange="this.form.submit();"
+			>
+			<option value="">JOPTION_SELECT_PUBLISHED</option>
+		</field>
+		<field
+			name="category"
+			type="category"
+			label="JOPTION_FILTER_CATEGORY"
+			extension="com_crowdfunding"
+			description="JOPTION_FILTER_CATEGORY_DESC"
+			onchange="this.form.submit();"
+			published="0,1,2"
+			>
+			<option value="">JOPTION_SELECT_CATEGORY</option>
+		</field>
+
+		<field
+				name="featured"
+				type="list"
+				label="COM_CROWDFUNDING_SELECT_FEATURED_STATUS"
+				onchange="this.form.submit();"
+		>
+			<option value="">COM_CROWDFUNDING_SELECT_FEATURED_STATUS</option>
+			<option value="1">COM_CROWDFUNDING_FEATURED</option>
+			<option value="0">COM_CROWDFUNDING_NOT_FEATURED</option>
+		</field>
+
+		<field
+			name="access"
+			type="accesslevel"
+			label="JOPTION_FILTER_ACCESS"
+			description="JOPTION_FILTER_ACCESS_DESC"
+			onchange="this.form.submit();"
+			>
+			<option value="">JOPTION_SELECT_ACCESS</option>
+		</field>
+
+        <field
+                name="approved"
+                type="list"
+                label="COM_CROWDFUNDING_SELECT_APPROVED_STATUS"
+                onchange="this.form.submit();"
+                >
+            <option value="">COM_CROWDFUNDING_SELECT_APPROVED_STATUS</option>
+			<option value="1">COM_CROWDFUNDING_APPROVED</option>
+			<option value="0">COM_CROWDFUNDING_DISAPPROVED</option>
+        </field>
+
+		<field
+				name="type"
+				type="cftypes"
+				label="COM_CROWDFUNDING_SELECT_TYPE"
+				onchange="this.form.submit();"
+		>
+			<option value="">COM_CROWDFUNDING_SELECT_TYPE</option>
+		</field>
+
+	</fields>
+	<fields name="list">
+		<field
+			name="fullordering"
+			type="list"
+			label="JGLOBAL_SORT_BY"
+			description="JGLOBAL_SORT_BY"
+			onchange="this.form.submit();"
+			default="a.created DESC"
+			>
+			<option value="">JGLOBAL_SORT_BY</option>
+			<option value="a.ordering ASC">JGRID_HEADING_ORDERING_ASC</option>
+			<option value="a.ordering DESC">JGRID_HEADING_ORDERING_DESC</option>
+			<option value="a.published ASC">JSTATUS_ASC</option>
+			<option value="a.published DESC">JSTATUS_DESC</option>
+			<option value="a.approved ASC">COM_CROWDFUNDING_APPROVED_ASC</option>
+			<option value="a.approved DESC">COM_CROWDFUNDING_APPROVED_DESC</option>
+			<option value="a.title ASC">JGLOBAL_TITLE_ASC</option>
+			<option value="a.title DESC">JGLOBAL_TITLE_DESC</option>
+			<option value="c.title ASC">JCATEGORY_ASC</option>
+			<option value="c.title DESC">JCATEGORY_DESC</option>
+			<option value="a.goal ASC">COM_CROWDFUNDING_GOAL_ASC</option>
+			<option value="a.goal DESC">COM_CROWDFUNDING_GOAL_DESC</option>
+			<option value="u.name ASC">COM_CROWDFUNDING_OWNER_ASC</option>
+			<option value="u.name DESC">COM_CROWDFUNDING_OWNER_DESC</option>
+			<option value="a.created ASC">COM_CROWDFUNDING_CREATED_ASC</option>
+			<option value="a.created DESC">COM_CROWDFUNDING_CREATED_DESC</option>
+			<option value="a.id ASC">JGRID_HEADING_ID_ASC</option>
+			<option value="a.id DESC">JGRID_HEADING_ID_DESC</option>
+			<option value="t.title ASC">COM_CROWDFUNDING_TYPE_ASC</option>
+			<option value="t.title DESC">COM_CROWDFUNDING_TYPE_DESC</option>
+			<option value="a.funded ASC">COM_CROWDFUNDING_FUNDED_ASC</option>
+			<option value="a.funded DESC">COM_CROWDFUNDING_FUNDED_DESC</option>
+			<option value="a.funding_start ASC">COM_CROWDFUNDING_START_DATE_ASC</option>
+			<option value="a.funding_start DESC">COM_CROWDFUNDING_START_DATE_DESC</option>
+			<option value="a.funding_end ASC">COM_CROWDFUNDING_END_DATE_ASC</option>
+			<option value="a.funding_end DESC">COM_CROWDFUNDING_END_DATE_DESC</option>
+			<option value="access_level ASC">JGRID_HEADING_ACCESS_ASC</option>
+			<option value="access_level DESC">JGRID_HEADING_ACCESS_DESC</option>
+		</field>
+		<field
+			name="limit"
+			type="limitbox"
+			class="input-mini"
+			default="25"
+			label="COM_CROWDFUNDING_LIST_LIMIT"
+			description="COM_CROWDFUNDING_LIST_LIMIT_DESC"
+			onchange="this.form.submit();"
+		/>
+	</fields>
+</form>

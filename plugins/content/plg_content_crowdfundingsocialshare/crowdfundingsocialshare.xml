@@ -1,0 +1,614 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.8" type="plugin" group="content" method="upgrade">
+    <name>PLG_CONTENT_CROWDFUNDINGSOCIALSHARE</name>
+    <author>Todor Iliev</author>
+    <copyright>Copyright (C) 2018 Todor Iliev ( ITPrism.com ). All rights reserved.</copyright>
+    <license>http://www.gnu.org/licenses/gpl-3.0.en.html GNU/GPLv3</license>
+    <authorEmail>todor@itprism.com</authorEmail>
+    <authorUrl>http://itprism.com</authorUrl>
+    <version>2.7.3</version>
+    <creationDate>08 March, 2018</creationDate>
+    <description><![CDATA[
+    <p>Crowdfunding - Social Share is a plugin that adds block with sharing buttons and code for embedding. These things can be used from users to share the project with their friends.</p>
+    <p><a href="http://itprism.com/" target="_blank">Subscribe for the newsletter</a> to receive information about updates and new ITPrism extensions.</p>
+    ]]></description>
+    
+    <help url="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_HELP_URL"/>
+    
+    <files>
+        <filename plugin="crowdfundingsocialshare">crowdfundingsocialshare.php</filename>
+        <filename>script.js</filename>
+        <filename>style.css</filename>
+
+        <folder>language</folder>
+    </files>
+    
+    <config>
+		<fields name="params">
+			<fieldset name="basic">
+                <field name="display_title_details_view" type="radio" default="0" label="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_DISPLAY_TITLE_DETAILS_VIEW" description="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_DISPLAY_TITLE_DETAILS_VIEW_DESC" class="btn-group">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+
+                <field name="display_title_payment_view" type="radio" default="0" label="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_DISPLAY_TITLE_PAYMENT_VIEW" description="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_DISPLAY_TITLE_PAYMENT_VIEW_DESC" class="btn-group">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="loadCss" type="radio" default="1" label="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_LOAD_STYLE_CSS" description="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_LOAD_STYLE_CSS_DESC" class="btn-group">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="dynamicLocale" type="radio" default="0" label="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_AUTO_LANGUAGE" description="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_AUTO_LANGUAGE_DESC" class="btn-group">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+            </fieldset>
+
+            <fieldset name="twitter_section" label="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_TWITTER_SETTINGS">
+				<field name="spacer1" type="spacer" class="text" label="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_TWITTER_SETTINGS" />
+                <field name="twitterButton" type="radio" default="0" label="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_TWITTER_BUTTON" description="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_TWITTER_BUTTON_DESC" class="btn-group">
+                   <option value="0">JHIDE</option>
+                   <option value="1">JSHOW</option>
+                </field>
+                <field name="twitterName" type="text" default="" size="80" label="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_TWITTER_NAME" description="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_TWITTER_NAME_DESC" />
+                <field name="twitterRecommend" type="text" default="" size="80" label="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_TWITTER_RECOMMEND" description="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_TWITTER_RECOMMEND_DESC" />
+                <field name="twitterHashtag" type="text" default="" size="80" label="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_TWITTER_HASHTAGS" description="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_TWITTER_HASHTAGS_DESC" />
+                <field name="twitterSize" type="list" default="small" label="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_TWITTER_SIZE" description="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_TWITTER_SIZE_DESC" >
+                   <option value="small">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_SMALL</option>
+                   <option value="large">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_LARGE</option>
+                </field>
+                <field name="twitterCounter" type="list" default="horizontal" label="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_TWITTER_COUNTER" description="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_TWITTER_COUNTER_DESC" >
+                   <option value="none">JHIDE</option>
+                   <option value="vertical">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_VERTICAL</option>
+                   <option value="horizontal">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_HORIZONTAL</option>
+                </field>
+                <field name="twitterLanguage" type="list" default="en" label="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_TWITTER_LANGUAGE" description="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_TWITTER_LANGUAGE_DESC" >
+                   <option value="ar">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_ARABIC</option>
+                   <option value="eu">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_BASQUE</option>
+                   <option value="ca">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_CATALAN</option>
+                   <option value="zh-cn">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_CHINESE_ZH</option>
+                   <option value="zh-tw">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_CHINESE_TW</option>
+                   <option value="cs">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_CZECH</option>
+                   <option value="da">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_DANISH</option>
+                   <option value="nl">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_DUTCH</option>
+                   <option value="en">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_ENGLISH</option>
+                   <option value="fa">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_FARSI</option>
+                   <option value="fil">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_FILIPINO</option>
+                   <option value="fr">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_FRENCH_FR</option>
+                   <option value="fi">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_FINNISH</option>
+                   <option value="de">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_GERMAN</option>
+                   <option value="el">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_GREEK</option>
+                   <option value="hi">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_HINDI</option>
+                   <option value="hu">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_HUNGARIAN</option>
+                   <option value="it">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_ITALIAN</option>
+                   <option value="id">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_INDONESIAN</option>
+                   <option value="uk">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_UKRAINIAN</option>
+                   <option value="ur">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_URDU</option>
+                   <option value="ko">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_KOREAN</option>
+                   <option value="msa">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_MALAY</option>
+                   <option value="ru">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_RUSSIAN</option>
+                   <option value="es">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_SPANISH</option>
+                   <option value="sv">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_SWEDISH</option>
+                   <option value="no">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_NORWEGIAN</option>
+                   <option value="pl">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_POLISH</option>
+                   <option value="pt">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_PORTUGUESE</option>
+                   <option value="th">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_THAI</option>
+                   <option value="tr">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_TURKISH</option>
+                   <option value="jp">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_JAPANESE</option>
+                </field>
+                <field name="load_twitter_library" type="radio" default="1" label="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_TWITTER_LOAD_LIBRARY" description="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_TWITTER_LOAD_LIBRARY_DESC" class="btn-group">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+            </fieldset>
+
+            <fieldset name="facebook_like_section" label="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_FACEBOOK_SETTINGS">
+                <field name="spacer3" type="spacer" class="text" label="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_FACEBOOK_SETTINGS" />
+                <field name="facebookLikeButton" type="radio" default="0" label="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_FACEBOOK_BUTTON" description="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_FACEBOOK_BUTTON_DESC" class="btn-group">
+                   <option value="0">JHIDE</option>
+                   <option value="1">JSHOW</option>
+                </field>
+                <field name="facebookLikeAction" type="list" default="like" label="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_FACEBOOK_TEXT" description="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_FACEBOOK_TEXT_DESC" >
+                   <option value="like">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_LIKE</option>
+                   <option value="recommend">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_RECOMMEND</option>
+                </field>
+                <field name="facebookLikeType" type="list" default="button_count" label="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_FACEBOOK_TYPE" description="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_FACEBOOK_TYPE_DESC" >
+                    <option value="standard">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_STANDARD</option>
+                    <option value="box_count">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_BOX_COUNT</option>
+                    <option value="button_count">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_BUTTON_COUNT</option>
+                    <option value="button">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_BUTTON</option>
+                </field>
+                <field name="facebookLikeFaces" type="radio" default="0" label="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_FACEBOOK_FACES" description="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_FACEBOOK_FACES_DESC" class="btn-group">
+                   <option value="0">JHIDE</option>
+                   <option value="1">JSHOW</option>
+                </field>
+                <field name="facebookLikeColor" type="list" default="light" label="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_FACEBOOK_FONT" description="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_FACEBOOK_FONT_DESC" >
+                   <option value="light">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_LIGHT</option>
+                   <option value="dark">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_DARK</option>
+                </field>
+                <field name="facebookLikeFont" type="list" default="" label="Facebook Like Font" description="The font to display in the button. Options: 'arial', 'lucida grande', 'segoe ui', 'tahoma', 'trebuchet ms', 'verdana' " >
+                    <option value="">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_DEFAULT</option>
+                    <option value="arial">arial</option>
+                    <option value="lucida grande">lucida grande</option>
+                    <option value="segoe ui">segoe ui</option>
+                    <option value="tahoma">tahoma</option>
+                    <option value="trebuchet ms">trebuchet ms</option>
+                    <option value="verdana">verdana</option>
+                </field>
+                <field name="facebookLikeWidth" type="text" default="90" label="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_FACEBOOK_WIDTH" description="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_FACEBOOK_WIDTH_DESC" />
+                <field name="fbLocale" type="list" default="en_US" label="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_LANGUAGE" description="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_LANGUAGE_DESC">
+                    <option value="af_ZA">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_AFRIKAANS</option>
+                    <option value="ar_AR">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_ARABIC</option>
+                    <option value="sq_AL">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_ALBANIAN</option>
+                    <option value="ay_BO">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_AYMARA</option>
+                    <option value="az_AZ">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_AZERI</option>
+                    <option value="be_BY">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_BELARUSIAN</option>
+                    <option value="bg_BG">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_BULGARIAN</option>
+                    <option value="bn_IN">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_BENGALI</option>
+                    <option value="bs_BA">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_BOSNIAN</option>
+                    <option value="ca_ES">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_CATALAN</option>
+                    <option value="zh_CN">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_CHINESE_ZH</option>
+                    <option value="zh_HK">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_CHINESE_HK</option>
+                    <option value="zh_TW">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_CHINESE_TW</option>
+                    <option value="ck_US">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_CHEROKEE</option>
+                    <option value="cs_CZ">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_CZECH</option>
+                    <option value="cy_GB">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_WELSH</option>
+                    <option value="da_DK">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_DANISH</option>
+                    <option value="de_DE">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_GERMAN</option>
+                    <option value="el_GR">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_GREEK</option>
+                    <option value="en_GB">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_ENGLISH_GB</option>
+                    <option value="en_PI">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_ENGLISH_PI</option>
+                    <option value="en_UD">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_ENGLISH_UD</option>
+                    <option value="en_US">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_ENGLISH</option>
+                    <option value="eo_EO">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_ESPERANTO</option>
+                    <option value="es_CL">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_SPANISH_CL</option>
+                    <option value="es_CO">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_SPANISH_CO</option>
+                    <option value="es_ES">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_SPANISH_ES</option>
+                    <option value="es_LA">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_SPANISH</option>
+                    <option value="es_MX">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_SPANISH_MX</option>
+                    <option value="es_VE">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_SPANISH_VE</option>
+                    <option value="et_EE">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_ESTONIAN</option>
+                    <option value="eu_ES">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_BASQUE</option>
+                    <option value="fa_IR">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_PERSIAN</option>
+                    <option value="fb_LT">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_LEET_SPEAK</option>
+                    <option value="fi_FI">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_FINNISH</option>
+                    <option value="fo_FO">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_FAROESE</option>
+                    <option value="fr_CA">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_FRENCH_CA</option>
+                    <option value="fr_FR">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_FRENCH_FR</option>
+                    <option value="ga_IE">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_IRISH</option>
+                    <option value="gl_ES">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_GALICIAN</option>
+                    <option value="gn_PY">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_GUARANI</option>
+                    <option value="gu_IN">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_GUJARATI</option>
+                    <option value="he_IL">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_HEBREW</option>
+                    <option value="hi_IN">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_HINDI</option>
+                    <option value="hr_HR">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_CROATIAN</option>
+                    <option value="hu_HU">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_HUNGARIAN</option>
+                    <option value="hy_AM">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_ARMENIAN</option>
+                    <option value="id_ID">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_INDONESIAN</option>
+                    <option value="is_IS">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_ICELANDIC</option>
+                    <option value="it_IT">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_ITALIAN</option>
+                    <option value="ja_JP">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_JAPANESE</option>
+                    <option value="jv_ID">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_JAVANESE</option>
+                    <option value="ka_GE">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_GEORGIAN</option>
+                    <option value="kk_KZ">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_KAZAKH</option>
+                    <option value="km_KH">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_KHMER</option>
+                    <option value="kn_IN">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_KANNADA</option>
+                    <option value="ko_KR">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_KOREAN</option>
+                    <option value="ku_TR">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_KURDISH</option>
+                    <option value="la_VA">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_LATIN</option>
+                    <option value="li_NL">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_LIMBURGISH</option>
+                    <option value="lt_LT">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_LITHUANIAN</option>
+                    <option value="lv_LV">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_LATVIAN</option>
+                    <option value="mg_MG">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_MALAGASY</option>
+                    <option value="mk_MK">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_MACEDONIAN</option>
+                    <option value="ml_IN">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_MALAYalam</option>
+                    <option value="mn_MN">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_MONGOLIAN</option>
+                    <option value="mr_IN">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_MARATHI</option>
+                    <option value="ms_MY">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_MALAY</option>
+                    <option value="mt_MT">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_MALTESE</option>
+                    <option value="nb_NO">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_NORWEGIAN_NB</option>
+                    <option value="nn_NO">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_NORWEGIAN_NN</option>
+                    <option value="ne_NP">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_NEPALI</option>
+                    <option value="nl_BE">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_DUTCH_BE</option>
+                    <option value="nl_NL">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_DUTCH</option>
+                    <option value="pa_IN">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_PUNJABI</option>
+                    <option value="pl_PL">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_POLISH</option>
+                    <option value="ps_AF">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_PASHTO</option>
+                    <option value="pt_BR">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_PORTUGUESE_BR</option>
+                    <option value="pt_PT">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_PORTUGUESE_PT</option>
+                    <option value="qu_PE">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_QUECHUA</option>
+                    <option value="rm_CH">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_ROMANSH</option>
+                    <option value="ro_RO">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_ROMANIAN</option>
+                    <option value="ru_RU">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_RUSSIAN</option>
+                    <option value="sa_IN">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_SANSKRIT</option>
+                    <option value="se_NO">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_NORTHERN_SAMI</option>
+                    <option value="sk_SK">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_SLOVAK</option>
+                    <option value="sl_SI">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_SLOVENIAN</option>
+                    <option value="so_SO">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_SOMALI</option>
+                    <option value="sr_RS">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_SERBIAN</option>
+                    <option value="sv_SE">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_SWEDISH</option>
+                    <option value="sw_KE">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_SWAHILI</option>
+                    <option value="sy_SY">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_SYRIAC</option>
+                    <option value="ta_IN">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_TAMIL</option>
+                    <option value="te_IN">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_TELUGU</option>
+                    <option value="tg_TJ">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_TAJIK</option>
+                    <option value="th_TH">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_THAI</option>
+                    <option value="tl_PH">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_FILIPINO</option>
+                    <option value="tl_ST">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_KLINGON</option>
+                    <option value="tr_TR">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_TURKISH</option>
+                    <option value="tt_RU">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_TATAR</option>
+                    <option value="uk_UA">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_UKRAINIAN</option>
+                    <option value="ur_PK">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_URDU</option>
+                    <option value="uz_UZ">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_UZBEK</option>
+                    <option value="vi_VN">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_VIETNAMESE</option>
+                    <option value="xh_ZA">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_XHOSA</option>
+                    <option value="yi_DE">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_YIDDISH</option>
+                    <option value="zu_ZA">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_ZULU</option>
+                </field>
+                <field name="facebookLikeAppId" type="text" default="" label="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_FACEBOOK_APP_ID" description="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_FACEBOOK_APP_ID_DESC" />
+                <field name="facebookLikeShare" type="radio" default="0" label="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_FACEBOOK_SHARE_BUTTON" description="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_FACEBOOK_SHARE_BUTTON_BUTTON" class="btn-group">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="facebookRootDiv" type="radio" default="1" label="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_FACEBOOK_ROOT" description="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_FACEBOOK_ROOT_DESC" class="btn-group">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="facebookKidDirectedSite" type="radio" default="0" label="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_FACEBOOK_KID_DIRECTED_SITE" description="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_FACEBOOK_KID_DIRECTED_SITE_DESC" class="btn-group">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="facebookLoadJsLib" type="radio" default="1" label="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_LOAD_JS_LIB" description="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_LOAD_JS_LIB_DESC" class="btn-group">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+            </fieldset>
+
+            <fieldset name="stumbleupon_section" label="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_STUMBLEUPON_SETTINGS">
+                <field name="spacer4" type="spacer" class="text" label="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_STUMBLEUPON_SETTINGS" />
+                <field name="stumbleButton" type="radio" default="0" label="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_STUMBLEUPON_BUTTON" description="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_STUMBLEUPON_BUTTON_DESC" class="btn-group">
+                   <option value="0">JHIDE</option>
+                   <option value="1">JSHOW</option>
+                </field>  
+                <field name="stumbleType" type="list" default="1" label="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_STUMBLEUPON_TYPE" description="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_STUMBLEUPON_TYPE_DESC" >
+                   <option value="1">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_BUTTON_1</option>
+                   <option value="2">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_BUTTON_2</option>
+                   <option value="3">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_BUTTON_3</option>
+                   <option value="4">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_BUTTON_4</option>
+                   <option value="5">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_BUTTON_5</option>
+                   <option value="6">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_BUTTON_6</option>
+                </field>  
+            </fieldset>
+
+            <fieldset name="linkedin_section" label="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_LINKEDIN_SETTINGS">
+                <field name="spacer5" type="spacer" class="text" label="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_LINKEDIN_SETTINGS" />
+                <field name="linkedInButton" type="radio" default="0" label="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_LINKEDIN_BUTTON" description="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_LINKEDIN_BUTTON_DESC" class="btn-group">
+                   <option value="0">JHIDE</option>
+                   <option value="1">JSHOW</option>
+                </field>
+                <field name="linkedInType" type="list" default="right" label="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_LINKEDIN_TYPE" description="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_LINKEDIN_TYPE_DESC" >
+                   <option value="none">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_COUNTER_NONE</option>
+                   <option value="top">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_COUNTER_TOP</option>
+                   <option value="right">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_COUNTER_RIGHT</option>
+                </field>
+                <field name="load_linkedin_library" type="radio" default="1" label="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_LINKEDIN_LOAD_LIBRARY" description="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_LINKEDIN_LOAD_LIBRARY_DESC" class="btn-group">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="linkedInLocale" type="list" default="en_US" label="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_LANGUAGE" description="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_LANGUAGE_DESC">
+                    <option value="en_US">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_ENGLISH</option>
+                    <option value="es_LA">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_SPANISH</option>
+                    <option value="de_DE">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_GERMAN</option>
+                    <option value="fr_FR">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_FRENCH</option>
+                    <option value="ru_RU">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_RUSSIAN</option>
+                    <option value="it_IT">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_ITALIAN</option>
+                    <option value="pt_BR">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_PORTUGUESE</option>
+                    <option value="ro_RO">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_ROMANIAN</option>
+                    <option value="tr_TR">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_TURKISH</option>
+                    <option value="ja_JP">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_JAPANESE</option>
+                    <option value="id_ID">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_INDONESIAN</option>
+                    <option value="ms_MY">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_MALAY</option>
+                    <option value="ko_KR">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_KOREAN</option>
+                    <option value="sv_SE">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_SWEDISH</option>
+                    <option value="cs_CZ">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_CZECH</option>
+                    <option value="nl_NL">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_DUTCH</option>
+                    <option value="pl_PL">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_POLISH</option>
+                    <option value="no_NO">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_NORWEGIAN</option>
+                    <option value="da_DK">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_DANISH</option>
+                </field>
+            </fieldset>
+
+            <fieldset name="reddit_section" label="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_REDDIT_SETTINGS">
+                <field name="spacer6" type="spacer" class="text" label="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_REDDIT_SETTINGS" />
+                <field name="redditButton" type="radio" default="0" label="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_REDDIT_BUTTON" description="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_REDDIT_BUTTON_DESC" class="btn-group">
+                   <option value="0">JHIDE</option>
+                   <option value="1">JSHOW</option>
+                </field>
+                <field name="redditType" type="list" default="0" label="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_REDDIT_STYLE" description="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_REDDIT_STYLE_DESC" >
+                   <option value="0">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_BUTTON_1</option>
+                   <option value="1">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_BUTTON_2</option>
+                   <option value="2">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_BUTTON_3</option>
+                   <option value="3">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_BUTTON_4</option>
+                   <option value="4">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_BUTTON_5</option>
+                   <option value="5">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_BUTTON_6</option>
+                   <option value="6">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_BUTTON_7</option>
+                   <option value="7">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_BUTTON_8</option>
+                   <option value="8">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_BUTTON_9</option>
+                   <option value="9">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_BUTTON_10</option>
+                   <option value="10">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_BUTTON_11</option>
+                   <option value="11">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_BUTTON_12</option>
+                   <option value="12">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_BUTTON_13</option>
+                   <option value="13">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_BUTTON_14</option>
+                   <option value="14">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_BUTTON_15</option>
+                   <option value="15">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_BUTTON_16</option>
+                   <option value="16">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_BUTTON_17</option>
+                   <option value="17">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_BUTTON_18</option>
+                   <option value="18">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_BUTTON_19</option>
+                   <option value="19">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_BUTTON_20</option>
+                   <option value="20">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_BUTTON_21</option>
+                   <option value="21">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_BUTTON_22</option>
+                   <option value="22">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_BUTTON_23</option>
+                </field>
+                <field name="redditBgColor" type="text" default="" label="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_REDDIT_BG_COLOR" description="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_REDDIT_BG_COLOR_DESC" />
+                <field name="redditBorderColor" type="text" default="" label="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_REDDIT_BORDER_COLOR" description="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_REDDIT_BORDER_COLOR_DESC" />
+                <field name="redditNewTab" type="radio" default="1" label="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_REDDIT_NEW_TAB" description="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_REDDIT_NEW_TAB_DESC" class="btn-group">
+                   <option value="0">JNO</option>
+                   <option value="1">JYES</option>
+                </field>
+            </fieldset>
+
+            <fieldset name="google_one_section" label="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_GOOGLE_ONE_SETTINGS">
+                <field name="spacer7" type="spacer" class="text" label="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_GOOGLE_ONE_SETTINGS" />
+                <field name="plusButton" type="radio" default="0" label="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_GOOGLE_ONE_BUTTON" description="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_GOOGLE_ONE_BUTTON_DESC" class="btn-group">
+                   <option value="0">JHIDE</option>
+                   <option value="1">JSHOW</option>
+                </field>
+                <field name="plusType" type="list" default="medium" label="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_GOOGLE_ONE_STYLE" description="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_GOOGLE_ONE_STYLE_DESC" >
+                   <option value="small">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_SMALL_15</option>
+                   <option value="standart">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_STANDARD_24</option>
+                   <option value="medium">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_MEDIUM_20</option>
+                   <option value="tall">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_TALL_60</option>
+                </field>
+                
+                <field name="plusAnnotation" type="list" default="" label="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_GOOGLE_ONE_ANNOTATION" description="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_GOOGLE_ONE_ANNOTATION_DESC" >
+                   <option value="">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_BUBBLE</option>
+                   <option value="inline">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_INLINE</option>
+                   <option value="none">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_NONE</option>
+                </field>
+                
+                <field name="plusLocale" type="list" default="en" label="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_LANGUAGE" description="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_LANGUAGE_DESC" >
+                    <option value="ar">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_ARABIC</option>
+                    <option value="bn">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_BENGALI</option>
+                    <option value="bg">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_BULGARIAN</option>
+                    <option value="ca">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_CATALAN</option>
+                    <option value="zh">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_CHINESE_ZH</option>
+                    <option value="zh_CN">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_CHINESE_ZH</option>
+                    <option value="zh_HK">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_CHINESE_HK</option>
+                    <option value="zh_TW">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_CHINESE_TW</option>
+                    <option value="hr">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_CROATIAN</option>
+                    <option value="cs">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_CZECH</option>
+                    <option value="da">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_DANISH</option>
+                    <option value="nl">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_DUTCH</option>
+                    <option value="en">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_ENGLISH</option>
+                    <option value="en_IN">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_ENGLISH_IN</option>
+                    <option value="en_IE">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_ENGLISH_IR</option>
+                    <option value="en_SG">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_ENGLISH_SG</option>
+                    <option value="en_ZA">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_ENGLISH_SA</option>
+                    <option value="en_GB">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_ENGLISH_GB</option>
+                    <option value="fil">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_FILIPINO</option>
+                    <option value="fi">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_FINNISH</option>
+                    <option value="fr">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_FRENCH_FR</option>
+                    <option value="de">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_GERMAN</option>
+                    <option value="de_CH">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_GERMAN_CH</option>
+                    <option value="el">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_GREEK</option>
+                    <option value="gu">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_GUJARATI</option>
+                    <option value="iw">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_HEBREW</option>
+                    <option value="hi">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_HINDI</option>
+                    <option value="hu">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_HUNGARIAN</option>
+                    <option value="in">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_INDONESIAN</option>
+                    <option value="it">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_ITALIAN</option>
+                    <option value="ja">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_JAPANESE</option>
+                    <option value="kn">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_KANNADA</option>
+                    <option value="ko">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_KOREAN</option>
+                    <option value="lv">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_LATVIAN</option>
+                    <option value="ln">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_LINGALA</option>
+                    <option value="lt">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_LITHUANIAN</option>
+                    <option value="ms">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_MALAY</option>
+                    <option value="ml">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_MALAYalam</option>
+                    <option value="mr">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_MARATHI</option>
+                    <option value="no">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_NORWEGIAN</option>
+                    <option value="or">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_ORIYA</option>
+                    <option value="fa">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_PERSIAN</option>
+                    <option value="pl">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_POLISH</option>
+                    <option value="pt_BR">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_PORTUGUESE_BR</option>
+                    <option value="pt_PT">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_PORTUGUESE_PT</option>
+                    <option value="ro">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_ROMANIAN</option>
+                    <option value="ru">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_RUSSIAN</option>
+                    <option value="sr">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_SERBIAN</option>
+                    <option value="sk">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_SLOVAK</option>
+                    <option value="sl">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_SLOVENIAN</option>
+                    <option value="es">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_SPANISH</option>
+                    <option value="sv">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_SWEDISH</option>
+                    <option value="gsw">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_GERMAN_SW</option>
+                    <option value="ta">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_TAMIL</option>
+                    <option value="te">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_TELUGU</option>
+                    <option value="th">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_THAI</option>
+                    <option value="tr">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_TURKISH</option>
+                    <option value="uk">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_UKRAINIAN</option>
+                    <option value="vi">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_VIETNAMESE</option>
+                </field>
+                <field name="loadGoogleJsLib" type="radio" default="1" label="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_GOOGLE_LOAD_JS" description="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_GOOGLE_LOAD_JS_DESC" class="btn-group">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+            </fieldset>
+
+            <fieldset name="pinterest_section" label="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_PINTEREST_SETTINGS">
+                <field name="spacer8" type="spacer" class="text" label="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_PINTEREST_SETTINGS" />
+                <field name="pinterestButton" type="radio" default="0" label="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_PINTEREST_BUTTON" description="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_PINTEREST_BUTTON_DESC" class="btn-group">
+                   <option value="0">JHIDE</option>
+                   <option value="1">JSHOW</option>
+                </field>
+                <field name="pinterestImages" type="list" default="one" label="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_PINTEREST_IMAGES" description="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_PINTEREST_IMAGES_DESC" >
+                   <option value="one">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_ONE_IMAGE</option>
+                   <option value="any">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_ANY_IMAGE</option>
+                </field>
+                <field name="pinterestType" type="list" default="none" label="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_PINTEREST_TYPE" description="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_PINTEREST_TYPE_DESC" >
+                   <option value="none">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_NOT_SHOWN</option>
+                   <option value="above">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_ABOVE_BUTTON</option>
+                   <option value="beside">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_BESIDE_BUTTON</option>
+                </field>
+                <field name="loadPinterestJsLib" type="radio" default="1" label="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_PINTEREST_JS" description="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_PINTEREST_LOAD_JS_DESC" class="btn-group">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+            </fieldset>
+
+            <fieldset name="google_share_section" label="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_GOOGLE_SHARE_SETTINGS">
+                <field name="spacer10" type="spacer" class="text" label="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_GOOGLE_SHARE_SETTINGS" />
+                <field name="gsButton" type="radio" default="0" label="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_GOOGLE_SHARE_BUTTON" description="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_GOOGLE_SHARE_BUTTON" class="btn-group">
+                   <option value="0">JHIDE</option>
+                   <option value="1">JSHOW</option>
+                </field>
+                <field name="gsType" type="list" default="0" label="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_GOOGLE_SHARE_STYLE" description="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_GOOGLE_SHARE_STYLE_DESC" >
+                   <option value="15">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_SMALL_15</option>
+                   <option value="0">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_STANDARD</option>
+                   <option value="24">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_LARGE_20</option>
+                </field>
+                
+                <field name="gsAnnotation" type="list" default="bubble" label="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_GOOGLE_SHARE_ANNOTATION" description="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_GOOGLE_SHARE_ANNOTATION_DESC" >
+                   <option value="bubble">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_BUBBLE_HORIZONTAL</option>
+                   <option value="vertical-bubble">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_BUBBLE_VERTICAL</option>
+                   <option value="inline">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_INLINE</option>
+                   <option value="none">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_NONE</option>
+                </field>
+                
+                <field name="gsLocale" type="list" default="en" label="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_LANGUAGE" description="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_LANGUAGE_DESC" >
+                    <option value="ar">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_ARABIC</option>
+                    <option value="bn">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_BENGALI</option>
+                    <option value="bg">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_BULGARIAN</option>
+                    <option value="ca">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_CATALAN</option>
+                    <option value="zh">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_CHINESE</option>
+                    <option value="zh_CN">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_CHINESE_ZH</option>
+                    <option value="zh_HK">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_CHINESE_HK</option>
+                    <option value="zh_TW">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_CHINESE_TW</option>
+                    <option value="hr">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_CROATIAN</option>
+                    <option value="cs">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_CZECH</option>
+                    <option value="da">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_DANISH</option>
+                    <option value="nl">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_DUTCH</option>
+                    <option value="en">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_ENGLISH</option>
+                    <option value="en_IN">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_ENGLISH_IN</option>
+                    <option value="en_IE">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_ENGLISH_IR</option>
+                    <option value="en_SG">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_ENGLISH_SG</option>
+                    <option value="en_ZA">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_ENGLISH_SA</option>
+                    <option value="en_GB">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_ENGLISH_GB</option>
+                    <option value="fil">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_FILIPINO</option>
+                    <option value="fi">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_FINNISH</option>
+                    <option value="fr">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_FRENCH_FR</option>
+                    <option value="de">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_GERMAN</option>
+                    <option value="de_CH">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_GERMAN_CH</option>
+                    <option value="el">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_GREEK</option>
+                    <option value="gu">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_GUJARATI</option>
+                    <option value="iw">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_HEBREW</option>
+                    <option value="hi">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_HINDI</option>
+                    <option value="hu">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_HUNGARIAN</option>
+                    <option value="in">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_INDONESIAN</option>
+                    <option value="it">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_ITALIAN</option>
+                    <option value="ja">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_JAPANESE</option>
+                    <option value="kn">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_KANNADA</option>
+                    <option value="ko">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_KOREAN</option>
+                    <option value="lv">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_LATVIAN</option>
+                    <option value="ln">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_LINGALA</option>
+                    <option value="lt">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_LITHUANIAN</option>
+                    <option value="ms">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_MALAY</option>
+                    <option value="ml">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_MALAYalam</option>
+                    <option value="mr">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_MARATHI</option>
+                    <option value="no">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_NORWEGIAN</option>
+                    <option value="or">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_ORIYA</option>
+                    <option value="fa">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_PERSIAN</option>
+                    <option value="pl">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_POLISH</option>
+                    <option value="pt_BR">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_PORTUGUESE_BR</option>
+                    <option value="pt_PT">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_PORTUGUESE_PT</option>
+                    <option value="ro">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_ROMANIAN</option>
+                    <option value="ru">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_RUSSIAN</option>
+                    <option value="sr">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_SERBIAN</option>
+                    <option value="sk">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_SLOVAK</option>
+                    <option value="sl">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_SLOVENIAN</option>
+                    <option value="es">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_SPANISH</option>
+                    <option value="sv">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_SWEDISH</option>
+                    <option value="gsw">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_GERMAN_SW</option>
+                    <option value="ta">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_TAMIL</option>
+                    <option value="te">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_TELUGU</option>
+                    <option value="th">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_THAI</option>
+                    <option value="tr">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_TURKISH</option>
+                    <option value="uk">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_UKRAINIAN</option>
+                    <option value="vi">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_VIETNAMESE</option>
+                </field>
+                
+			</fieldset>
+            <fieldset name="thumblr_section" label="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_TUMBLR_SETTINGS">
+                <field name="spacer2" type="spacer" class="text" label="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_TUMBLR_SETTINGS" />
+                <field name="tumblrButton" type="radio" default="0" label="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_TUMBLR_BUTTON" description="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_TUMBLR_BUTTON_DESC" class="btn-group">
+                    <option value="0">JHIDE</option>
+                    <option value="1">JSHOW</option>
+                </field>
+                <field name="tumblr_notes" type="list" default="none" label="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_COUNTER_PLACEMENT" description="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_COUNTER_PLACEMENT_DESC" >
+                    <option value="none">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_NONE</option>
+                    <option value="right">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_BESIDE</option>
+                    <option value="top">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_ABOVE</option>
+                </field>
+                <field name="tumblr_color" type="list" default="blue" label="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_COLOR" description="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_COLOR_DESC" >
+                    <option value="blue">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_BLUE</option>
+                    <option value="white">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_WHITE</option>
+                    <option value="black">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_BLACK</option>
+                </field>
+                <field name="loadTumblrJsLib" type="radio" default="1" label="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_TUMBLR_LOAD_JS" description="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_TUMBLR_LOAD_JS_DESC" class="btn-group">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+            </fieldset>
+	           
+           <fieldset name="embed" label="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_EMBED_SETTINGS">
+                <field name="display_embed_link" type="radio" default="1" label="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_DISPLAY_EMBED_LINK" description="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_DISPLAY_EMBED_LINK_DESC" class="btn-group">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="display_embed_button" type="radio" default="1" label="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_DISPLAY_EMBED_BUTTON" description="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_DISPLAY_EMBED_BUTTON_DESC" class="btn-group">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="display_embed_email" type="radio" default="1" label="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_DISPLAY_EMBED_EMAIL" description="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_DISPLAY_EMBED_EMAIL_DESC" class="btn-group">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+               <field name="display_follow" type="radio" default="0" label="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_DISPLAY_FOLLOW" description="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_DISPLAY_FOLLOW_DESC" class="btn-group">
+                   <option value="0">JNO</option>
+                   <option value="1">JYES</option>
+               </field>
+            </fieldset>
+            
+	        <fieldset name="short_url_settings" label="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_SHORTENER_SETTINGS">
+                <field name="shortener_service" type="list" default="" label="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_SHORTENER_SERVICE" description="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_SHORTENER_SERVICE_DESC" >
+                   <option value="">PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_NONE</option>
+                   <option value="google">goo.gl</option>
+                   <option value="bitly">bit.ly</option>
+                   <option value="bitlycom">bitly.com</option>
+                   <option value="jmp">j.mp</option>
+                   <option value="tinycc">tiny.cc</option>
+                </field>
+                <field name="shortener_login" type="text" default="" label="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_LOGIN" description="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_LOGIN_DESC"/>
+                <field name="shortener_api_key" type="text" default="" size="80" label="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_API_KEY" description="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_API_KEY_DESC"/>
+            </fieldset>
+            
+            <fieldset name="additional_code" label="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_ADDITIONAL_BUTTONS">
+                <field name="ebuttons1" type="textarea" default="" label="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_CUSTOM_BUTTON_CODE" description="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_CUSTOM_BUTTON_CODE_DESC" class="span6" rows="10" filter="raw" />
+                <field name="ebuttons2" type="textarea" default="" label="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_CUSTOM_BUTTON_CODE" description="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_CUSTOM_BUTTON_CODE_DESC" class="span6" rows="10" filter="raw" />
+                <field name="ebuttons3" type="textarea" default="" label="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_CUSTOM_BUTTON_CODE" description="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_CUSTOM_BUTTON_CODE_DESC" class="span6" rows="10" filter="raw" />
+                <field name="ebuttons4" type="textarea" default="" label="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_CUSTOM_BUTTON_CODE" description="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_CUSTOM_BUTTON_CODE_DESC" class="span6" rows="10" filter="raw" />
+                <field name="ebuttons5" type="textarea" default="" label="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_CUSTOM_BUTTON_CODE" description="PLG_CONTENT_CROWDFUNDINGSOCIALSHARE_CUSTOM_BUTTON_CODE_DESC" class="span6" rows="10" filter="raw" />
+            </fieldset>
+            
+        </fields>
+	</config>
+</extension>

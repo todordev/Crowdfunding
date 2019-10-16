@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset name="credentials">
+
+        <field name="username" type="text"
+               labelclass="col-sm-2 control-label"
+               class="validate-username col-sm-10"
+               filter="username"
+               label="COM_CROWDFUNDING_USERNAME"
+               size="25"
+               required="true"
+               validate="username"
+                />
+
+        <field name="password" type="password"
+               labelclass="col-sm-2 control-label"
+               class="validate-password col-sm-10"
+               required="true"
+               filter="raw"
+               label="JGLOBAL_PASSWORD"
+               size="25"
+                />
+
+    </fieldset>
+
+    <fieldset>
+        <field name="return" type="hidden"/>
+    </fieldset>
+</form>

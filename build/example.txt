@@ -1,0 +1,6 @@
+cfg.name=crowdfunding
+cfg.version=v2.4
+cfg.joomlaVersion=J3.5
+cfg.buildDir=packages
+cfg.sourceDir=/..PATH../crowdfunding
+cfg.pkgDir=/..PATH../pkg_crowdfunding

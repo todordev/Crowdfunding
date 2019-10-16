@@ -1,0 +1,671 @@
+@CHARSET "UTF-8";
+
+span.help-block {
+	font-style: italic;
+	font-size: x-small;
+}
+
+div.info-mini {
+	font-style: italic;
+	font-size: xx-small;
+}
+
+#jform_funding_days-lbl, #jform_funding_end-lbl {
+	display: inline;
+}
+
+.width_600px{
+	width: 600px !important;
+}
+
+.width_400px{
+	width: 400px !important;
+}
+
+.height_600px{
+	height: 600px;
+}
+
+.relative {
+    position: relative;
+}
+
+.absolute-bottom{
+	position: absolute;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   margin-left: auto;
+   margin-right: auto;
+}
+
+.reward-form {
+	background-color: #f2f2f2;
+	border: thin solid #6c6c6c;
+	margin-bottom: 20px;
+	position: relative;
+}
+
+.reward-form-help {
+	padding-left: 10px;
+	font-weight: bold;
+	color: black;
+}
+
+.btn_remove_reward {
+	position: absolute;
+	bottom:20px;
+	right: 20px;
+}
+
+.bolder {
+	font-weight: bolder;
+}
+
+/* START Project Thumbnail Styles */
+
+.cf-project {
+	min-height: 480px;
+	position: relative;
+}
+
+.cf-thumnails-thumb {
+   display: block;
+	min-height: 200px;
+}
+
+.cf-caption-info {
+	padding: 0 10px;
+	margin: 10px 0;
+	text-align: left;
+}
+
+/* END Project Thumbnail Styles */
+
+.cf-details-block {
+	margin: 10px 0;
+}
+
+.cf-border-bottom {
+	border-bottom: thin solid #d1d1d1;
+}
+
+.cf-border-top {
+	border-top: thin solid #d1d1d1;
+}
+
+.crowdf-embeded {
+	margin-top: 5px;
+	border-top: thin dashed #d1d1d1;
+}
+
+.cfinfo {
+	background-color: #ebebeb;
+    padding:10px;
+    overflow: hidden;
+}
+
+.cfinfo-raised {
+	font-size: 48px;
+	margin: 10px 0;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.cfinfo-raised-of {
+	font-weight: bold;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.cfinfo-days-raised .row {
+	margin-top: 10px;
+}
+
+.cfinfo-days-raised img {
+    margin-right: 5px;
+}
+
+.cfinfo-stats {
+	font-size: x-large;
+	text-align: center;
+    margin-top: 5px;
+}
+
+.cfinfo-days-wrapper, .cfinfo-percent-wrapper {
+	width: 50%;
+	float: left;
+}
+
+.cfinfo-funding-type{
+	border-top: thin solid #b2b2b2;
+	font-size: medium;
+	font-weight: bold;
+	padding: 10px 0;
+	margin-top:5px;
+}
+
+.cfinfo-funding-action {
+	border-top: thin solid #b2b2b2;
+	padding: 10px 0;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+.cfinfo-funding-type-info {
+	padding: 10px 0;
+	font-size: x-small;
+}
+
+/* START Rewards Navigation */
+
+.cfrewards div.reward_title {
+	text-transform: uppercase;
+	font-weight: bold;
+    color: #6c6c6c;
+    cursor: text;
+    border-bottom: none;
+}
+
+.cfrewards > div:first-child {
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+.cfrewards > div  {
+    float: none;
+    margin-bottom: -1px;
+    border: 1px solid #DDDDDD;
+    line-height: 20px;
+    padding: 8px 12px;
+    display: block;
+}
+
+.cfrewards a, .cfrewards a:hover {
+	display: block;
+	text-decoration: none;
+}
+
+.nav-tabs.nav-stacked > li > a:hover, .nav-tabs.nav-stacked > li > a:focus {
+    border-color: #DDDDDD;
+    z-index: 2;
+}
+
+div.reward:hover  {
+	 border-color: #DDDDDD;
+    z-index: 2;
+    background-color: #EEEEEE;
+    text-decoration: none;
+}
+
+/* END Rewards Navigation */
+
+.rtitle, .rdesc {
+	color: #6c6c6c;
+}
+
+.ramount {
+	font-size: large;
+	font-weight: bold;
+	display: block;
+	border-bottom: thin dashed gray;
+   padding: 5px 0;
+   color: black;
+}
+
+.rtitle {
+	font-size: medium;
+	font-weight: bold;
+	margin: 5px 5px 5px 0;
+	display: block;
+}
+
+.rdesc {
+	display: block;
+	font-size: small;
+}
+
+.embed-code {
+	width: 100%;
+	height: 150px;
+}
+
+.bl {
+	border-left: thin solid #b2b2b2;
+}
+
+.fzmfwbu{
+	font-size: medium;
+	text-transform: uppercase;
+	font-weight: bold;
+    text-align: center;
+}
+
+/* Padding and Margin */
+
+.p-5 {
+	padding: 5px;
+}
+
+.p-10 {
+	padding: 10px;
+}
+
+.p-10-5 {
+	padding: 10px 5px;
+}
+
+.pl-5 {
+	padding-left: 5px;
+}
+
+.pl-10 {
+	padding-left: 10px;
+}
+
+.pt-5 {
+	padding-top: 5px;
+}
+
+.mt-5 {
+	margin-top: 5px;
+}
+
+.mt-10 {
+	margin-top: 10px;
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
+
+.mtb-5 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.mtb-10 {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.ml-10 {
+	margin-left: 10px;
+}
+
+.m-10 {
+	margin: 10px;   
+}
+
+.mtr-10-10 {
+	margin: 10px 10px 0 0;   
+}
+
+.mtb-15-0 {
+	margin: 15px 0;
+}
+
+.mtb-25-0 {
+	margin: 25px 0;
+}
+
+.m-0 {
+	margin: 0;
+}
+
+.mt-0 {
+	margin-top: 0;
+}
+
+.mb-10 {
+	margin-bottom: 10px;
+}
+
+.mb-15 {
+	margin-bottom: 15px;
+}
+
+/* Backing */
+
+.cfbr{
+	margin-left: 0 !important;
+}
+
+.cfbr > li {
+	padding-left: 0 !important;
+}
+
+.cfbr > li:first-child > a {
+	text-transform: uppercase;
+	font-weight: bold;
+	text-align: left;
+   color: #6c6c6c;
+   cursor: text;
+}
+
+#form-pledge button{
+	display: block;
+	margin-top: 20px;
+}
+
+.cfinfo .well {
+	background-color: #dfdfdf;
+}
+
+.cf-fund-result-state {
+	border-bottom: thin dashed #aaaaaa;
+	padding-bottom: 5px;	
+	text-transform: uppercase;
+}
+
+.cf-frss {
+	padding-top: 5px;	
+	font-size: small;
+}
+
+.hr {
+	border-bottom: thin dashed #afafaf;
+	width: 100%;
+}
+
+.cf-update-item, .cf-comment-item {
+	padding: 15px 0;
+	position: relative;
+}
+
+.cf-info-bar {
+	background-color: #ffffe8;
+	border: thin solid #d1d1d1;
+	padding: 5px;
+}
+
+.button-large {
+	padding: 5px 30px !important;
+}
+
+.button[disabled] {
+  background-color: #d9d9d9;
+  cursor:not-allowed;
+}
+
+.cursor-help {
+	cursor: help;
+}
+
+.cf-transactions th{
+	text-align: center !important;
+}
+
+.cf-funder-row {
+	padding: 10px;
+	border-bottom: thin dashed gray;
+}
+
+.cf-funder-row .cf-funder-picture {
+	margin-right: 5px;
+}
+
+.cf-location {
+	background: url(../images/icon_location.png) no-repeat left !important;
+	padding-left: 20px;
+}
+
+.cf-funder-amount {
+	font-size: large;
+}
+
+.cf-project-manager-box {
+	 border: 1px solid #ddd;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.055);
+    display: block;
+    line-height: 20px;
+    padding: 0;
+    transition: all 0.2s ease-in-out 0s;
+}
+
+/* Fonts */
+
+.thumbnail > a > img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+}
+
+.cf-projects-list .button:hover{
+	color: white; 
+}
+
+.cf-pm-toolbar {
+    background: -moz-linear-gradient(center top, #FFFFFF 0%, #EDEDED 100%) repeat scroll 0 0 transparent;
+    border-bottom: 1px solid #D3D3D3;
+    color: #0C192E;
+    padding: 10px;
+    text-shadow: 0 1px 0 #FFFFFF;
+}
+
+#jform_pitch_video-lbl:after, #jform_pitch_image-lbl:after {
+	content: " *";
+}
+
+
+.parsley-error-list li{
+	color: red;
+}
+
+/* Rewards */
+.cf-rewards-submit-btn {
+	margin:15px 0 50px;
+}
+
+.cf-fm {
+	font-size: medium;
+}
+
+#js-extra-images-rows {
+	margin-top: 50px;
+}
+
+.extra-image-row {
+	border: thin solid #dcdcdc;
+	margin: 20px 0;
+}
+
+.extra-image-row img, .extra-image-row a {
+	margin: 10px;
+}
+
+.extra-image-row:hover {
+	background: #eaeaea;
+}
+
+.js-reward-image-wrapper .thumbnail {
+	margin-bottom: 10px;
+}
+
+.js-reward-image-wrapper .input-large {
+	display: block;
+}
+
+.border-thin-solid {
+    border: thin solid #d1d1d1;
+}
+
+/* YouTube Responsive */
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px; height: 0; overflow: hidden;
+}
+ 
+.video-container iframe,
+.video-container object,
+.video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.cf-rewards-backers {
+	font-weight: bolder;
+	background: url(../images/backers.png) no-repeat left;
+	padding-left: 20px;
+}
+
+.cf-rewards-delivery {
+	background: url(../images/calendar.png) no-repeat left;
+	padding-left: 20px;
+	font-size: x-small;
+}
+
+.cf-rewards-claimed {
+   font-weight: bolder;
+	background: url(../images/claimed.png) no-repeat left;
+	padding-left: 20px;
+}
+
+/* Heights */
+.height-150px {
+	height: 150px;
+}
+
+/* Categories */
+
+/* Categories Layout Grid */
+#cf-categories-grid .cf-category {
+    height: 350px;
+    position: relative;
+}
+
+/* Categories Layout List */
+#cf-categories-list > .cf-category {
+    border: 1px solid #ddd;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.055);
+    display: block;
+    line-height: 20px;
+    padding: 4px;
+    transition: all 0.2s ease-in-out 0s;
+    margin-top: 15px;
+}
+
+#cf-categories-list .cf-category-thumbnail {
+	float: left;
+	display: block;
+	max-height: 200px;
+	max-width: 200px;
+	width: 20%; 
+}
+
+#cf-categories-list .cf-category-thumbnail > img {
+	margin: 0 auto;
+	display: block;
+}
+
+#cf-categories-list .cf-category-content {
+	float: left;
+	display: block;
+	padding-left: 5px;
+	width: 79%; 
+}
+
+.cursor-pointer {
+	cursor: pointer;
+}
+
+#js-fixed-dragger-cropper{
+	text-align: center;
+}
+
+.cf-caption-info .span4 {
+    float: left !important;
+    max-width: 80px;
+}
+
+.cf-vertical-align {
+  display: flex;
+  flex-direction: row;
+}
+
+.cf-vertical-align > [class^="col-"],
+.cf-vertical-align > [class*=" col-"] {
+  display: flex;
+  align-items: center;     /* Align the flex-items vertically */
+  justify-content: center; /* Optional, to align inner flex-items 
+                              horizontally within the column  */
+}
+
+.panel-brown > .panel-heading {
+    background-color: #deb887;
+    border-color: #deb887;
+    color: #000;
+}
+
+.panel-brown {
+    border-color: #deb887;
+}
+
+.panel-reward {
+    border-color: #e4e4e4;
+}
+
+.panel-reward > .panel-heading {
+    background-color: #e9e9e9;
+    border-color: #dcdcdc;
+    color: #000;
+}
+
+.cf-ghost-class {
+	border: thin dashed black;
+}
+
+.cf-chosen-class {
+	border: thin dashed black;
+}
+
+.cf-hover-element:hover {
+	font-weight: bold;
+}
+
+.block-inline {
+	display: inline-block;
+}
+
+.remodal .form-group {
+	text-align: left !important;
+}
+
+.cfprojects .project-details {
+	margin-bottom: 30px;
+	border: thin solid #d5d0cb;
+}
+
+.cfprojects .media-middle,
+.cfprojects .media-body {
+	padding: 5px;
+}
+
+.cfprojects .project-details:nth-child(even) {
+	background-color: #fafafa;
+}
+
+.cfprojects .media-tools {
+	display: table-cell;
+	padding: 5px 5px 0 0;
+}
+
+.project-details .media-footer {
+	z-index: 1;
+	padding: 10px 0 10px 5px;
+	border-top: thin solid #cbcbcb;
+}
+
+.project-details .mf-color1 {
+	background-color: #fafaec;
+}
+
+.project-details .mf-color2 {
+	background-color: #f6f1e3;
+}

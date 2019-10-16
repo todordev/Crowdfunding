@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset name="funding" label="COM_CROWDFUNDING_FUNDING_DEFAULT_LABEL"
+              addfieldpath="/administrator/components/com_crowdfunding/models/fields">
+
+        <field name="goal" type="cfgoal" class="form-control"
+               css_layout="Bootstrap 3"
+               label="COM_CROWDFUNDING_FIELD_FUNDING_GOAL"
+               description="COM_CROWDFUNDING_FIELD_FUNDING_GOAL_DESC"
+               required="true"
+                />
+
+        <field name="funding_type" type="cffundingtype"
+               label="COM_CROWDFUNDING_FIELD_FUNDING_TYPE"
+               description="COM_CROWDFUNDING_FIELD_FUNDING_TYPE_DESC"
+               required="true"
+                />
+
+        <field name="funding_duration_type" type="FundingLabel"
+               label="COM_CROWDFUNDING_FIELD_FUNDING_DURATION"
+               description="COM_CROWDFUNDING_FIELD_FUNDING_DURATION_DESC"
+                />
+
+        <field name="funding_days" type="text" class="form-control" labelclass="cursor-pointer"
+               label="COM_CROWDFUNDING_FIELD_FUNDING_DAYS"
+               filter="trim"
+                />
+
+        <field name="funding_end" type="cfcalendar" class="form-control" labelclass="cursor-pointer"
+               label="COM_CROWDFUNDING_FIELD_FUNDING_END"
+               filter="trim"
+               default="NOW"
+               />
+
+        <field name="id" type="hidden" filter="int"/>
+
+    </fieldset>
+</form>

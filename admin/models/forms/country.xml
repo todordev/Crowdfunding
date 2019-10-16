@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset>
+
+        <field name="name" type="text"
+               label="COM_CROWDFUNDING_NAME"
+               description="COM_CROWDFUNDING_COUNTRY_NAME_DESC"
+               filter="trim"
+               required="true"
+               />
+
+        <field name="code" type="text"
+               label="COM_CROWDFUNDING_COUNTRY_CODE"
+               description="COM_CROWDFUNDING_COUNTRY_CODE_DESC"
+               filter="trim"
+               required="true"
+               hint="BG"
+                />
+
+        <field name="locale" type="text"
+               label="COM_CROWDFUNDING_COUNTRY_LOCALE"
+               description="COM_CROWDFUNDING_COUNTRY_LOCALE_DESC"
+               filter="trim"
+               required="true"
+               hint="bg_BG"
+                />
+
+        <field name="latitude" type="text"
+               label="COM_CROWDFUNDING_LATITUDE"
+               description="COM_CROWDFUNDING_LATITUDE_DESC"
+               filter="trim"
+                />
+
+        <field name="longitude" type="text"
+               label="COM_CROWDFUNDING_LONGITUDE"
+               description="COM_CROWDFUNDING_LONGITUDE_DESC"
+                />
+
+        <field name="timezone" type="timezone"
+               label="COM_CROWDFUNDING_TIMEZONE"
+               description="COM_CROWDFUNDING_TIMEZONE_DESC"
+                />
+
+        <field name="id" type="text" default="0" label="JGLOBAL_FIELD_ID_LABEL"
+               readonly="true" class="readonly"
+               description="JGLOBAL_FIELD_ID_DESC"/>
+
+    </fieldset>
+</form>
